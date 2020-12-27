@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.hipstertech"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "proceesorsap",
+    "packageName": "com.hipstertech",
+    "packageFolder": "com/hipstertech",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NWFjNDJjNjc4OWM3NTAwNTYzYzkzNDAzNjMwNmMzMzI5ZjljNTA4OGQ3MWJhMTI0NGE2NTEyNzExODhiMjkzYzZhNTQ4OWEzOTMwNzBlMzdkYzFhZDc0ZThmZGI1MGNjYTk3ZDJlZGE3YmZjNTkwMDE2OTA1YmJmOTA4ZmViM2Y=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "creationTimestamp": 1609028399796,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
