@@ -114,4 +114,11 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+#application:
+
+sap:
+  url: www.gruponacion.biz/SB1ServiceLayerSCG/b1s/v1
+  username: service3
+  pwd: A12345
+  bd: ZTESTGN
+
