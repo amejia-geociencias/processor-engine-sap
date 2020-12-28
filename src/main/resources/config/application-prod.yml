@@ -33,9 +33,9 @@ spring:
       enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/proceesorsap?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mysql://35.223.70.53:3306/proceesorsap?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
     username: root
-    password:
+    password: Chuky2424
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -133,7 +133,7 @@ jhipster:
 # application:
 
 sap:
-  url: www.gruponacion.biz/SB1ServiceLayerSCG/b1s/v1
+  url: https://www.gruponacion.biz/SB1ServiceLayerSCG/b1s/v1
   username: service3
   pwd: A12345
   bd: GN
