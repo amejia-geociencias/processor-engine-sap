@@ -48,7 +48,7 @@ public class CsvReaderService {
 
 	private DocumentLines getLineWithValues(CSVRecord record,DocumentType type) {
 		DocumentLines line = new DocumentLines();
-		line.setAccountCode(record.get("INV1_COGSOCRCOD"));
+		line.setAccountCode(record.get("OINV_CTLACCOUNT"));
 		line.setCOGSCostingCode(record.get("INV1_COGSOCRCOD"));
 		line.setCOGSCostingCode2(record.get("INV1_COGSOCRCO2"));
 		line.setCOGSCostingCode3(record.get("INV1_COGSOCRCO3"));
@@ -71,12 +71,12 @@ public class CsvReaderService {
 		line.setItemCode(record.get("INV1_ITEMCODE"));
 		line.setQuantity(Double.parseDouble(record.get("INV1_QUANTITY")));
 		line.setDiscountPercent(Double.parseDouble(record.get("INV1_DISCPRCNT")));
+		line.setWarehouseCode(record.get("INV1_WHSCODE"));
 		//line.setActualBaseLine(record.get("INV1_BASELINE"));
 		if(type.equals(DocumentType.NC)) {
 			line.setBaseEntry(Integer.parseInt(record.get("OINV_DOCENTRY")));
 			line.setBaseLine(record.get("INV1_LINENUM"));
 			line.setBaseType(13);
-			line.setWarehouseCode(record.get("INV1_WHSCODE"));
 		}
 		
 		if(type.equals(DocumentType.FE)) {
@@ -117,6 +117,7 @@ public class CsvReaderService {
 		//document.setU_NPR(record.get("OINV_U_NPR"));
 		//document.setU_NSP(record.get("OINV_U_NSP"));
 		document.setDocObjectCode(type.equals(DocumentType.FE) ? "13" : "14"); 
+		document.setU_PLAZOSUS(record.get("INV1_U_PLAZOSUS"));
 		//document.setIssuingReason(Integer.parseInt(record.get("OINV_ISSREASON")));
 		//document.setRelatedType(Integer.parseInt(record.get("OINV_RELATEDTYP")));
 		//document.setU_GTI_MOTIVOS(Integer.parseInt(record.get("OINV_U_GTI_MOTIVOS")));

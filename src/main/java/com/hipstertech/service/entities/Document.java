@@ -1081,6 +1081,8 @@ public class Document implements Serializable {
 	public String U_REFRAZON;
 
 	public String U_NUM_CONSE;
+	
+	public String U_PLAZOSUS;
 
 
 
@@ -4443,6 +4445,16 @@ public class Document implements Serializable {
 
 
 
+	public String getU_PLAZOSUS() {
+		return U_PLAZOSUS;
+	}
+
+
+	public void setU_PLAZOSUS(String u_PLAZOSUS) {
+		U_PLAZOSUS = u_PLAZOSUS;
+	}
+
+
 	public String toJson(){
 		Gson gson = new GsonBuilder().create();
 		return gson.toJson(this);
@@ -4546,7 +4558,7 @@ public class Document implements Serializable {
 				+ TrackingNumber + ", TransNum=" + TransNum + ", TransportationCode=" + TransportationCode
 				+ ", U_AgeCob=" + U_AgeCob + ", U_Agencia=" + U_Agencia + ", U_AplInteger=" + U_AplInteger + ", U_BDOC="
 				+ U_BDOC + ", U_caja=" + U_caja + ", U_Canal=" + U_Canal + ", U_CanCobro=" + U_CanCobro
-				+ ", U_CardName=" + U_CardName + ", U_Cobrador=" + U_Cobrador + ", U_Condic=" + U_Condic
+				+ ", U_CardName=" + U_CardName + ", U_Cobrador=" + U_Cobrador + ", U_Condic=" + U_Condic  + ", U_PLAZOSUS=" + U_PLAZOSUS
 				+ ", U_Consignacion=" + U_Consignacion + ", U_Contrato=" + U_Contrato + ", U_DocEntrega=" + U_DocEntrega
 				+ ", U_DocHacienda=" + U_DocHacienda + ", U_ClaveNumerica=" + U_ClaveNumerica + ", U_ETA=" + U_ETA
 				+ ", U_ETS=" + U_ETS + ", U_FactInc=" + U_FactInc + ", U_FecExon=" + U_FecExon + ", U_FormPag="

@@ -202,7 +202,7 @@ public class ServiceLayerClient {
 			line.setUnitPrice(lineSAP.getUnitPrice());
 			line.setQuantity(lineSAP.getQuantity());
 			line.setDiscountPercent(lineSAP.getDiscountPercent());
-			//line.setActualBaseLine(lineSAP.getActualBaseLine());
+			line.setWarehouseCode(lineSAP.getWarehouseCode());
 			
 			if(type.equals(DocumentType.FE)) {
 				
@@ -212,7 +212,6 @@ public class ServiceLayerClient {
 				line.setBaseEntry(docEntry);
 				line.setBaseLine(lineSAP.getLineNum()+"");
 				line.setBaseType(13);
-				line.setWarehouseCode(lineSAP.getWarehouseCode());
 			}
 			
 			resultLines.add(line);
@@ -249,6 +248,7 @@ public class ServiceLayerClient {
 		invoiceResult.setU_NSP(invoiceSAP.getU_NSP());
 		invoiceResult.setU_TipoDoc(invoiceSAP.getU_TipoDoc());
 		invoiceResult.setDocObjectCode(type.equals(DocumentType.FE) ? "13" : "14");
+		invoiceResult.setU_PLAZOSUS(invoiceSAP.getU_PLAZOSUS());
 		//invoiceResult.setIssuingReason(invoiceSAP.getIssuingReason());
 		//invoiceResult.setRelatedType(invoiceSAP.getRelatedType());
 		//invoiceResult.setU_GTI_MOTIVOS(invoiceSAP.getU_GTI_MOTIVOS());

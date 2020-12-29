@@ -120,5 +120,5 @@ sap:
   url: https://www.gruponacion.biz/SB1ServiceLayer/b1s/v1
   username: service3
   pwd: A12345
-  bd: ZTESTGN
+  bd: GN
 
