@@ -132,7 +132,7 @@ public class ServiceLayerClient {
 		try {
 			Document invoiceSAP = getDocumentByDocNumberSAP(docNumber, "Invoices");
 			Document documentResult = setDocumentValues(invoiceSAP, serie, type);
-			documentResult.setDocumentLines(getLineWithValues(invoiceSAP.getDocumentLines(),type));
+			documentResult.setDocumentLines(getLineWithValues(invoiceSAP.getDocumentLines(),type,invoiceSAP.getDocEntry()));
 			return documentResult;
 		}catch (Exception e) {
 			log.error(e.getMessage());
@@ -174,7 +174,7 @@ public class ServiceLayerClient {
 		return document;
 	}
 
-	private List<DocumentLines> getLineWithValues(List<DocumentLines>  linesSAP, DocumentType type) {
+	private List<DocumentLines> getLineWithValues(List<DocumentLines>  linesSAP, DocumentType type, int docEntry ) {
 		
 		List<DocumentLines> resultLines = new ArrayList<DocumentLines>();
 		linesSAP.forEach(lineSAP->{
@@ -205,8 +205,8 @@ public class ServiceLayerClient {
 			//line.setActualBaseLine(lineSAP.getActualBaseLine());
 			
 			if(type.equals(DocumentType.NC)) {
-				line.setBaseEntry(lineSAP.getBaseEntry());
-				line.setBaseLine(lineSAP.getBaseLine());
+				line.setBaseEntry(docEntry);
+				line.setBaseLine(lineSAP.getLineNum()+"");
 				line.setBaseType(13);
 				line.setWarehouseCode(lineSAP.getWarehouseCode());
 			}
