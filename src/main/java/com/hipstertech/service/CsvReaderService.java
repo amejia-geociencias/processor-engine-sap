@@ -24,7 +24,7 @@ import com.hipstertech.service.entities.DocumentLines;
 public class CsvReaderService {
 	private final Logger log = LoggerFactory.getLogger(CsvReaderService.class);
 	
-	public Document getDocumentByDocNumber(String docNumber) {
+	public Document getDocumentByDocNumber(String docNumber,int serie) {
 		Document document=null;
 		try {
 			List<DocumentLines> lines = new ArrayList<DocumentLines>();
@@ -32,7 +32,7 @@ public class CsvReaderService {
 			for(CSVRecord record : csvRecords) {
 				if(record.get("OINV_DOCNUM").equals(docNumber)) {
 					if(document==null) {
-						document = setDocumentValues(record);
+						document = setDocumentValues(record,serie);
 					}
 					lines.add(getLineWithValues(record));
 				}
@@ -71,7 +71,7 @@ public class CsvReaderService {
 		return line;
 	}
 
-	private Document setDocumentValues(CSVRecord record) throws ParseException {
+	private Document setDocumentValues(CSVRecord record,int serie) throws ParseException {
 		Document document;
 		document = new Document();
 		document.setDocNum(record.get("OINV_DOCNUM")==null?null:Integer.parseInt(record.get("OINV_DOCNUM")));
@@ -94,6 +94,7 @@ public class CsvReaderService {
 		document.setU_NNE(record.get("OINV_U_NNE"));
 		document.setU_NPR(record.get("OINV_U_NPR"));
 		document.setU_NSP(record.get("OINV_U_NSP"));
+		document.setSeries(serie);
 		return document;
 	}
 	
