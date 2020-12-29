@@ -24,6 +24,13 @@ public interface MarketingDocumentsService {
      * @return the list of entities.
      */
     List<MarketingDocumentsDTO> findAll();
+    
+    /**
+     * Get all the marketingDocuments by job id.
+     *
+     * @return the list of entities.
+     */
+    List<MarketingDocumentsDTO> findByJobAndStatus(Long idJob, String Status);
 
 
     /**

@@ -16,7 +16,7 @@ public class CsvResources {
 	CsvReaderService csvReaderService;
 	
 	@GetMapping("/csv-get-doc/{docNum}/{serie}")
-	public void getDoc(@PathVariable String docNum,@PathVariable  int serie) {
+	public void getDoc(@PathVariable int docNum,@PathVariable  int serie) {
 		csvReaderService.getDocumentByDocNumber(docNum, serie);
 	}
 	

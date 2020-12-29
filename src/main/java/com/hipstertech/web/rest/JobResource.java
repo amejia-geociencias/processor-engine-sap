@@ -55,6 +55,11 @@ public class JobResource {
             .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
+    
+    @PostMapping("/jobs/run/{id}")
+    public void runJob(@PathVariable Long id) {
+    	jobService.run(id);
+    }
 
     /**
      * {@code PUT  /jobs} : Updates an existing job.

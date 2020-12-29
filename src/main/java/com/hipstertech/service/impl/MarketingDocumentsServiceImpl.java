@@ -65,4 +65,13 @@ public class MarketingDocumentsServiceImpl implements MarketingDocumentsService 
         log.debug("Request to delete MarketingDocuments : {}", id);
         marketingDocumentsRepository.deleteById(id);
     }
+    
+    @Override
+    @Transactional(readOnly = true)
+    public List<MarketingDocumentsDTO> findByJobAndStatus(Long idJob, String status) {
+        log.debug("Request to get all MarketingDocuments");
+        return marketingDocumentsRepository.findByJob_IdAndStatus(idJob,status).stream()
+            .map(marketingDocumentsMapper::toDto)
+            .collect(Collectors.toCollection(LinkedList::new));
+    }
 }
