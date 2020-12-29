@@ -208,7 +208,7 @@ public class Document implements Serializable {
 	public double DocRate;
 
 
-	public Instant DocTime;
+	//public Instant DocTime;
 
 
 	public double DocTotal;
@@ -1691,14 +1691,14 @@ public class Document implements Serializable {
 	}
 
 
-	public Instant getDocTime() {
-		return DocTime;
-	}
+//	public Instant getDocTime() {
+//		return DocTime;
+//	}
 
 
-	public void setDocTime(Instant docTime) {
-		DocTime = docTime;
-	}
+//	public void setDocTime(Instant docTime) {
+//		DocTime = docTime;
+//	}
 
 
 	public double getDocTotal() {
@@ -4442,10 +4442,146 @@ public class Document implements Serializable {
 
 
 
-	// GSON library for JSON
-	@Override
-	public String toString(){
+
+	public String toJson(){
 		Gson gson = new GsonBuilder().serializeNulls().create();
 		return gson.toJson(this);
+	}
+
+	@Override
+	public String toString() {
+		return "Document [Address=" + Address + ", Address2=" + Address2 + ", AgentCode=" + AgentCode
+				+ ", AnnualInvoiceDeclarationReference=" + AnnualInvoiceDeclarationReference
+				+ ", ApplyCurrentVATRatesForDownPaymentsToDraw=" + ApplyCurrentVATRatesForDownPaymentsToDraw
+				+ ", ApplyTaxOnFirstInstallment=" + ApplyTaxOnFirstInstallment + ", ArchiveNonremovableSalesQuotation="
+				+ ArchiveNonremovableSalesQuotation + ", AssetValueDate=" + AssetValueDate + ", ATDocumentType="
+				+ ATDocumentType + ", AttachmentEntry=" + AttachmentEntry + ", AuthorizationCode=" + AuthorizationCode
+				+ ", AuthorizationStatus=" + AuthorizationStatus + ", BaseAmount=" + BaseAmount + ", BaseAmountFC="
+				+ BaseAmountFC + ", BaseAmountSC=" + BaseAmountSC + ", BillOfExchangeReserved=" + BillOfExchangeReserved
+				+ ", BlanketAgreementNumber=" + BlanketAgreementNumber + ", BlockDunning=" + BlockDunning + ", Box1099="
+				+ Box1099 + ", BPChannelCode=" + BPChannelCode + ", BPChannelContact=" + BPChannelContact
+				+ ", BPL_IDAssignedToInvoice=" + BPL_IDAssignedToInvoice + ", BPLName=" + BPLName + ", CancelDate="
+				+ CancelDate + ", Cancelled=" + Cancelled + ", CancelStatus=" + CancelStatus + ", CardCode=" + CardCode
+				+ ", CardName=" + CardName + ", CashDiscountDateOffset=" + CashDiscountDateOffset
+				+ ", CentralBankIndicator=" + CentralBankIndicator + ", CertificationNumber=" + CertificationNumber
+				+ ", ClosingDate=" + ClosingDate + ", ClosingOption=" + ClosingOption + ", ClosingRemarks="
+				+ ClosingRemarks + ", Comments=" + Comments + ", CommissionTrade=" + CommissionTrade
+				+ ", CommissionTradeReturn=" + CommissionTradeReturn + ", Confirmed=" + Confirmed
+				+ ", ContactPersonCode=" + ContactPersonCode + ", ControlAccount=" + ControlAccount
+				+ ", CreateOnlineQuotation=" + CreateOnlineQuotation + ", CreationDate=" + CreationDate
+				+ ", DateOfReportingControlStatementVAT=" + DateOfReportingControlStatementVAT + ", DeferredTax="
+				+ DeferredTax + ", DiscountPercent=" + DiscountPercent + ", DocCurrency=" + DocCurrency + ", DocDate="
+				+ DocDate + ", DocDueDate=" + DocDueDate + ", DocEntry=" + DocEntry + ", docNum=" + DocNum
+				+ ", DocObjectCode=" + DocObjectCode + ", DocRate=" + DocRate + ", DocTotal="
+				+ DocTotal + ", DocTotalFc=" + DocTotalFc + ", DocTotalSys=" + DocTotalSys + ", DocType=" + DocType
+				+ ", DocumentDelivery=" + DocumentDelivery + ", DocumentLines=" + DocumentLines + ", DocumentsOwner="
+				+ DocumentsOwner + ", DocumentStatus=" + DocumentStatus + ", DocumentSubType=" + DocumentSubType
+				+ ", DocumentTaxID=" + DocumentTaxID + ", DownPayment=" + DownPayment + ", DownPaymentAmount="
+				+ DownPaymentAmount + ", DownPaymentAmountFC=" + DownPaymentAmountFC + ", DownPaymentAmountSC="
+				+ DownPaymentAmountSC + ", DownPaymentPercentage=" + DownPaymentPercentage + ", DownPaymentStatus="
+				+ DownPaymentStatus + ", DownPaymentTrasactionID=" + DownPaymentTrasactionID + ", DownPaymentType="
+				+ DownPaymentType + ", ECommerceGSTIN=" + ECommerceGSTIN + ", ECommerceOperator=" + ECommerceOperator
+				+ ", EDocErrorCode=" + EDocErrorCode + ", EDocErrorMessage=" + EDocErrorMessage + ", EDocExportFormat="
+				+ EDocExportFormat + ", EDocGenerationType=" + EDocGenerationType + ", EDocNum=" + EDocNum
+				+ ", EDocSeries=" + EDocSeries + ", EDocStatus=" + EDocStatus + ", ElecCommMessage=" + ElecCommMessage
+				+ ", ElecCommStatus=" + ElecCommStatus + ", EndDeliveryDate=" + EndDeliveryDate + ", EndDeliveryTime="
+				+ EndDeliveryTime + ", ETaxNumber=" + ETaxNumber + ", ETaxWebSite=" + ETaxWebSite
+				+ ", ExcludeFromTaxReportControlStatementVAT=" + ExcludeFromTaxReportControlStatementVAT
+				+ ", ExemptionValidityDateFrom=" + ExemptionValidityDateFrom + ", ExemptionValidityDateTo="
+				+ ExemptionValidityDateTo + ", ExternalCorrectedDocNum=" + ExternalCorrectedDocNum + ", ExtraDays="
+				+ ExtraDays + ", ExtraMonth=" + ExtraMonth + ", FederalTaxID=" + FederalTaxID + ", FinancialPeriod="
+				+ FinancialPeriod + ", FiscalDocNum=" + FiscalDocNum + ", FolioNumber=" + FolioNumber
+				+ ", FolioNumberFrom=" + FolioNumberFrom + ", FolioNumberTo=" + FolioNumberTo + ", FolioPrefixString="
+				+ FolioPrefixString + ", Form1099=" + Form1099 + ", GrosProfit=" + GrosProfit + ", GroupHandWritten="
+				+ GroupHandWritten + ", GroupNumber=" + GroupNumber + ", GroupSeries=" + GroupSeries
+				+ ", GSTTransactionType=" + GSTTransactionType + ", GTSChecker=" + GTSChecker + ", GTSPayee=" + GTSPayee
+				+ ", HandWritten=" + HandWritten + ", ImportFileNum=" + ImportFileNum + ", Indicator=" + Indicator
+				+ ", InsuranceOperation347=" + InsuranceOperation347 + ", InterimType=" + InterimType
+				+ ", InternalCorrectedDocNum=" + InternalCorrectedDocNum + ", IsAlteration=" + IsAlteration
+				+ ", IsPayToBank=" + IsPayToBank + ", IssuingReason=" + IssuingReason + ", JournalMemo=" + JournalMemo
+				+ ", LanguageCode=" + LanguageCode + ", Letter=" + Letter + ", ManualNumber=" + ManualNumber
+				+ ", MaximumCashDiscount=" + MaximumCashDiscount + ", NetProcedure=" + NetProcedure
+				+ ", NextCorrectingDocument=" + NextCorrectingDocument + ", NTSApproved=" + NTSApproved
+				+ ", NTSApprovedNumber=" + NTSApprovedNumber + ", NumAtCard=" + NumAtCard + ", NumberOfInstallments="
+				+ NumberOfInstallments + ", OpenForLandedCosts=" + OpenForLandedCosts + ", OpeningRemarks="
+				+ OpeningRemarks + ", OriginalCreditOrDebitDate=" + OriginalCreditOrDebitDate
+				+ ", OriginalCreditOrDebitNo=" + OriginalCreditOrDebitNo + ", OriginalRefDate=" + OriginalRefDate
+				+ ", OriginalRefNo=" + OriginalRefNo + ", PartialSupply=" + PartialSupply + ", PaymentBlock="
+				+ PaymentBlock + ", PaymentBlockEntry=" + PaymentBlockEntry + ", PaymentGroupCode=" + PaymentGroupCode
+				+ ", PaymentMethod=" + PaymentMethod + ", PaymentReference=" + PaymentReference
+				+ ", PayToBankAccountNo=" + PayToBankAccountNo + ", PayToBankBranch=" + PayToBankBranch
+				+ ", PayToBankCode=" + PayToBankCode + ", PayToBankCountry=" + PayToBankCountry + ", PayToCode="
+				+ PayToCode + ", PeriodIndicator=" + PeriodIndicator + ", Pick=" + Pick + ", PickRemark=" + PickRemark
+				+ ", PickStatus=" + PickStatus + ", PointOfIssueCode=" + PointOfIssueCode + ", POS_CashRegister="
+				+ POS_CashRegister + ", POSCashierNumber=" + POSCashierNumber + ", POSDailySummaryNo="
+				+ POSDailySummaryNo + ", POSEquipmentNumber=" + POSEquipmentNumber + ", POSManufacturerSerialNumber="
+				+ POSManufacturerSerialNumber + ", POSReceiptNo=" + POSReceiptNo + ", Printed=" + Printed
+				+ ", PrintSEPADirect=" + PrintSEPADirect + ", PrivateKeyVersion=" + PrivateKeyVersion + ", Project="
+				+ Project + ", Receiver=" + Receiver + ", Reference1=" + Reference1 + ", Reference2=" + Reference2
+				+ ", RelatedEntry=" + RelatedEntry + ", RelatedType=" + RelatedType + ", Releaser=" + Releaser
+				+ ", RelevantToGTS=" + RelevantToGTS + ", ReopenManuallyClosedOrCanceledDocument="
+				+ ReopenManuallyClosedOrCanceledDocument + ", ReopenOriginalDocument=" + ReopenOriginalDocument
+				+ ", ReportingSectionControlStatementVAT=" + ReportingSectionControlStatementVAT + ", ReqType="
+				+ ReqType + ", Requester=" + Requester + ", RequesterBranch=" + RequesterBranch
+				+ ", RequesterDepartment=" + RequesterDepartment + ", RequesterEmail=" + RequesterEmail
+				+ ", RequesterName=" + RequesterName + ", RequriedDate=" + RequriedDate + ", Reserve=" + Reserve
+				+ ", ReserveInvoice=" + ReserveInvoice + ", ReuseDocumentNum=" + ReuseDocumentNum
+				+ ", ReuseNotaFiscalNum=" + ReuseNotaFiscalNum + ", Revision=" + Revision + ", RevisionPo=" + RevisionPo
+				+ ", Rounding=" + Rounding + ", RoundingDiffAmount=" + RoundingDiffAmount + ", RoundingDiffAmountFC="
+				+ RoundingDiffAmountFC + ", RoundingDiffAmountSC=" + RoundingDiffAmountSC + ", SalesPersonCode="
+				+ SalesPersonCode + ", Segment=" + Segment + ", SendNotification=" + SendNotification
+				+ ", SequenceCode=" + SequenceCode + ", SequenceModel=" + SequenceModel + ", SequenceSerial="
+				+ SequenceSerial + ", Series=" + Series + ", SeriesString=" + SeriesString
+				+ ", ServiceGrossProfitPercent=" + ServiceGrossProfitPercent + ", ShipFrom=" + ShipFrom
+				+ ", ShipToCode=" + ShipToCode + ", ShowSCN=" + ShowSCN + ", SignatureDigest=" + SignatureDigest
+				+ ", SignatureInputMessage=" + SignatureInputMessage + ", SlpCode=" + SlpCode
+				+ ", SpecifiedClosingDate=" + SpecifiedClosingDate + ", StartDeliveryDate=" + StartDeliveryDate
+				+ ", StartDeliveryTime=" + StartDeliveryTime + ", StartFrom=" + StartFrom + ", Submitted=" + Submitted
+				+ ", SubSeriesString=" + SubSeriesString + ", SummeryType=" + SummeryType + ", Supplier=" + Supplier
+				+ ", TaxDate=" + TaxDate + ", TaxExemptionLetterNum=" + TaxExemptionLetterNum + ", TaxInvoiceDate="
+				+ TaxInvoiceDate + ", TaxInvoiceNo=" + TaxInvoiceNo + ", TotalDiscount=" + TotalDiscount
+				+ ", TotalDiscountFC=" + TotalDiscountFC + ", TotalDiscountSC=" + TotalDiscountSC
+				+ ", TotalEqualizationTax=" + TotalEqualizationTax + ", TotalEqualizationTaxFC="
+				+ TotalEqualizationTaxFC + ", TotalEqualizationTaxSC=" + TotalEqualizationTaxSC + ", TrackingNumber="
+				+ TrackingNumber + ", TransNum=" + TransNum + ", TransportationCode=" + TransportationCode
+				+ ", U_AgeCob=" + U_AgeCob + ", U_Agencia=" + U_Agencia + ", U_AplInt=" + U_AplInt + ", U_BDOC="
+				+ U_BDOC + ", U_caja=" + U_caja + ", U_Canal=" + U_Canal + ", U_CanCobro=" + U_CanCobro
+				+ ", U_CardName=" + U_CardName + ", U_Cobrador=" + U_Cobrador + ", U_Condic=" + U_Condic
+				+ ", U_Consignacion=" + U_Consignacion + ", U_Contrato=" + U_Contrato + ", U_DocEntrega=" + U_DocEntrega
+				+ ", U_DocHacienda=" + U_DocHacienda + ", U_ClaveNumerica=" + U_ClaveNumerica + ", U_ETA=" + U_ETA
+				+ ", U_ETS=" + U_ETS + ", U_FactInc=" + U_FactInc + ", U_FecExon=" + U_FecExon + ", U_FormPag="
+				+ U_FormPag + ", U_GTI_ID=" + U_GTI_ID + ", U_GTI_MOTIVOS=" + U_GTI_MOTIVOS + ", U_INCOTERM="
+				+ U_INCOTERM + ", U_IND151=" + U_IND151 + ", U_IndTiquete=" + U_IndTiquete + ", U_LugarEntrega="
+				+ U_LugarEntrega + ", U_MedioPago=" + U_MedioPago + ", U_NAR=" + U_NAR + ", U_NatDesc=" + U_NatDesc
+				+ ", U_NCA=" + U_NCA + ", U_NNE=" + U_NNE + ", U_NPR=" + U_NPR + ", U_NSP=" + U_NSP + ", U_NumElec="
+				+ U_NumElec + ", U_NumPedido=" + U_NumPedido + ", U_OrdenCompra=" + U_OrdenCompra + ", U_ORIPRE="
+				+ U_ORIPRE + ", U_PO=" + U_PO + ", U_REFDOC=" + U_REFDOC + ", U_RefInt=" + U_RefInt + ", U_SCG_Com="
+				+ U_SCG_Com + ", U_SCGCOM_CalCom=" + U_SCGCOM_CalCom + ", U_SCGRMS_Caja=" + U_SCGRMS_Caja
+				+ ", U_SCGRMS_FechaUpdt=" + U_SCGRMS_FechaUpdt + ", U_SCGRMS_Filler2=" + U_SCGRMS_Filler2
+				+ ", U_SCGRMS_IdDoc=" + U_SCGRMS_IdDoc + ", U_SCGRMS_Jornada=" + U_SCGRMS_Jornada
+				+ ", U_SCGRMS_NmbCaja=" + U_SCGRMS_NmbCaja + ", U_SCGRMS_NumDoc=" + U_SCGRMS_NumDoc
+				+ ", U_SCGRMS_NumDocLey=" + U_SCGRMS_NumDocLey + ", U_SCGRMS_Referencia0=" + U_SCGRMS_Referencia0
+				+ ", U_SCGRMS_Referencia1=" + U_SCGRMS_Referencia1 + ", U_SCGRMS_Referencia2=" + U_SCGRMS_Referencia2
+				+ ", U_SCGRMS_Referencia3=" + U_SCGRMS_Referencia3 + ", U_SCGRMS_Referencia4=" + U_SCGRMS_Referencia4
+				+ ", U_SCGRMS_Referencia5=" + U_SCGRMS_Referencia5 + ", U_SCGRMS_Referencia6=" + U_SCGRMS_Referencia6
+				+ ", U_SCGRMS_Referencia7=" + U_SCGRMS_Referencia7 + ", U_SCGRMS_Referencia8=" + U_SCGRMS_Referencia8
+				+ ", U_SCGRMS_Referencia9=" + U_SCGRMS_Referencia9 + ", U_SCGRMS_Replica=" + U_SCGRMS_Replica
+				+ ", U_SCGRMS_ResoAuto=" + U_SCGRMS_ResoAuto + ", U_SCGRMS_Tienda=" + U_SCGRMS_Tienda
+				+ ", U_SCGRMS_TiendaUdt=" + U_SCGRMS_TiendaUdt + ", U_SCGRMS_UserInsrt=" + U_SCGRMS_UserInsrt
+				+ ", U_SCGRMS_UserUpdt=" + U_SCGRMS_UserUpdt + ", U_Sucursal=" + U_Sucursal + ", U_Suscriptor="
+				+ U_Suscriptor + ", U_TipoDoc=" + U_TipoDoc + ", U_TipoExon=" + U_TipoExon + ", U_U_BREF=" + U_U_BREF
+				+ ", U_usrcaja=" + U_usrcaja + ", U_ZCobro=" + U_ZCobro + ", U_Zona=" + U_Zona + ", U_REFNUM="
+				+ U_REFNUM + ", U_REFFECHA=" + U_REFFECHA + ", U_REFTIPOR=" + U_REFTIPOR + ", U_REFTIPOD=" + U_REFTIPOD
+				+ ", U_REFRAZON=" + U_REFRAZON + ", U_NUM_CONSE=" + U_NUM_CONSE + ", UpdateDate=" + UpdateDate
+				+ ", UpDate=" + UpDate + ", UseBillToAddrToDetermineTax=" + UseBillToAddrToDetermineTax
+				+ ", UseCorrectionVATGroup=" + UseCorrectionVATGroup + ", UseShpdGoodsAct=" + UseShpdGoodsAct
+				+ ", VatDate=" + VatDate + ", VatPercent=" + VatPercent + ", VATRegNum=" + VATRegNum + ", VatSum="
+				+ VatSum + ", VatSumFc=" + VatSumFc + ", VatSumSys=" + VatSumSys + ", VehiclePlate=" + VehiclePlate
+				+ ", WareHouseUpdateType=" + WareHouseUpdateType + ", WTAmount=" + WTAmount + ", WTAmountFC="
+				+ WTAmountFC + ", WTAmountSC=" + WTAmountSC + ", WTApplied=" + WTApplied + ", WTAppliedFC="
+				+ WTAppliedFC + ", WTAppliedSC=" + WTAppliedSC + ", WTExemptedAmount=" + WTExemptedAmount
+				+ ", WTExemptedAmountFC=" + WTExemptedAmountFC + ", WTExemptedAmountSC=" + WTExemptedAmountSC
+				+ ", WTNonSubjectAmount=" + WTNonSubjectAmount + ", WTNonSubjectAmountFC=" + WTNonSubjectAmountFC
+				+ ", WTNonSubjectAmountSC=" + WTNonSubjectAmountSC + "]";
 	}
 }
