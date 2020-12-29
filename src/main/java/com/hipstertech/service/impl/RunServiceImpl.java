@@ -68,9 +68,9 @@ public class RunServiceImpl implements RunService {
 			documentList.forEach(i->{
 				Document documentInfo = null;
 				if(job.getSourceType().equals(SourceType.SL)) {
-					documentInfo = serviceLayerClient.getDocumentByDocNumber(i.getDocNumber(), job.getSerie());
+					documentInfo = serviceLayerClient.getDocumentByDocNumber(i.getDocNumber(), job.getSerie(),job.getDocumentType());
 				}else
-					documentInfo = csvReaderService.getDocumentByDocNumber(i.getDocNumber(), job.getSerie());
+					documentInfo = csvReaderService.getDocumentByDocNumber(i.getDocNumber(), job.getSerie(),job.getDocumentType());
 
 				if(documentInfo != null) {
 					//Create document

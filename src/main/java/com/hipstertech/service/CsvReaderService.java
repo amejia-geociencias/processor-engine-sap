@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
+import com.hipstertech.domain.enumeration.DocumentType;
 import com.hipstertech.service.entities.Document;
 import com.hipstertech.service.entities.DocumentLines;
 
@@ -21,7 +22,7 @@ import com.hipstertech.service.entities.DocumentLines;
 public class CsvReaderService {
 	private final Logger log = LoggerFactory.getLogger(CsvReaderService.class);
 	
-	public Document getDocumentByDocNumber(int docNumber,int serie) {
+	public Document getDocumentByDocNumber(int docNumber,int serie, DocumentType type) {
 		Document document=null;
 		try {
 			List<DocumentLines> lines = new ArrayList<DocumentLines>();
@@ -29,9 +30,9 @@ public class CsvReaderService {
 			for(CSVRecord record : csvRecords) {
 				if(record.get("OINV_DOCNUM").equals(docNumber+"")) {
 					if(document==null) {
-						document = setDocumentValues(record,serie);
+						document = setDocumentValues(record,serie,type);
 					}
-					lines.add(getLineWithValues(record));
+					lines.add(getLineWithValues(record,type));
 				}
 			if(document!=null)
 				document.setDocumentLines(lines);
@@ -43,7 +44,7 @@ public class CsvReaderService {
 		return document;
 	}
 
-	private DocumentLines getLineWithValues(CSVRecord record) {
+	private DocumentLines getLineWithValues(CSVRecord record,DocumentType type) {
 		DocumentLines line = new DocumentLines();
 		line.setAccountCode(record.get("INV1_COGSOCRCOD"));
 		line.setCOGSCostingCode(record.get("INV1_COGSOCRCOD"));
@@ -67,10 +68,13 @@ public class CsvReaderService {
 		line.setUnitPrice(record.get("INV1_PRICEBEFDI")==null?null:Double.parseDouble(record.get("INV1_PRICEBEFDI").replace(",","")));
 		line.setItemCode(record.get("INV1_ITEMCODE"));
 		line.setActualBaseLine(record.get("INV1_BASELINE"));
+		if(type.equals(DocumentType.NC)) {
+			//TODO
+		}
 		return line;
 	}
 
-	private Document setDocumentValues(CSVRecord record,int serie) throws ParseException {
+	private Document setDocumentValues(CSVRecord record,int serie, DocumentType type) throws ParseException {
 		Document document;
 		document = new Document();
 		document.setDocNum(record.get("OINV_DOCNUM")==null?null:Integer.parseInt(record.get("OINV_DOCNUM")));
@@ -98,8 +102,12 @@ public class CsvReaderService {
 		document.setRelatedType(Integer.parseInt(record.get("OINV_RELATEDTYP")));
 		document.setU_GTI_MOTIVOS(Integer.parseInt(record.get("OINV_U_GTI_MOTIVOS")));
 		document.setU_TipoExon(Integer.parseInt(record.get("OINV_U_TIPOEXON")));
-		
 		document.setSeries(serie);
+		
+		if(type.equals(DocumentType.NC)) {
+			//TODO
+		}
+		
 		return document;
 	}
 	

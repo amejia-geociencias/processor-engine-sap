@@ -8,14 +8,12 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.hipstertech.domain.enumeration.DocumentType;
 import com.hipstertech.service.entities.Document;
 import com.hipstertech.service.entities.DocumentLines;
 import com.hipstertech.service.entities.LoginSAP;
@@ -128,11 +126,11 @@ public class ServiceLayerClient {
 		}
 	}
 
-	public Document getDocumentByDocNumber(int docNumber,int serie) {
+	public Document getDocumentByDocNumber(int docNumber,int serie, DocumentType type) {
 		try {
 			Document invoiceSAP = getDocumentByDocNumberSAP(docNumber, "Invoices");
-			Document documentResult = setDocumentValues(invoiceSAP, serie);
-			documentResult.setDocumentLines(getLineWithValues(invoiceSAP.getDocumentLines()));
+			Document documentResult = setDocumentValues(invoiceSAP, serie, type);
+			documentResult.setDocumentLines(getLineWithValues(invoiceSAP.getDocumentLines(),type));
 			return documentResult;
 		}catch (Exception e) {
 			log.error(e.getMessage());
@@ -174,7 +172,7 @@ public class ServiceLayerClient {
 		return document;
 	}
 
-	private List<DocumentLines> getLineWithValues(List<DocumentLines>  linesSAP) {
+	private List<DocumentLines> getLineWithValues(List<DocumentLines>  linesSAP, DocumentType type) {
 		
 		List<DocumentLines> resultLines = new ArrayList<DocumentLines>();
 		linesSAP.forEach(lineSAP->{
@@ -201,13 +199,18 @@ public class ServiceLayerClient {
 			line.setTaxCode(lineSAP.getTaxCode());
 			line.setUnitPrice(lineSAP.getUnitPrice());
 			//line.setActualBaseLine(lineSAP.getActualBaseLine());
+			
+			if(type.equals(DocumentType.NC)) {
+				//TODO
+			}
+			
 			resultLines.add(line);
 		});
 		
 		return resultLines;
 	}
 
-	private Document setDocumentValues(Document invoiceSAP,int serie) throws ParseException {
+	private Document setDocumentValues(Document invoiceSAP,int serie, DocumentType type) throws ParseException {
 		Document invoiceResult = new Document();
 		invoiceResult.setCardCode(invoiceSAP.getCardCode());
 		invoiceResult.setComments(invoiceSAP.getComments());
@@ -232,6 +235,9 @@ public class ServiceLayerClient {
 		invoiceResult.setSeries(serie);
 		invoiceResult.setU_GTI_MOTIVOS(invoiceSAP.getU_GTI_MOTIVOS());
 		invoiceResult.setU_TipoExon(invoiceSAP.getU_TipoExon());
+		if(type.equals(DocumentType.NC)) {
+			//TODO
+		}
 		return invoiceResult;
 	}
 

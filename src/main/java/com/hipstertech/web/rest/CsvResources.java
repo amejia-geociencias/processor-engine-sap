@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hipstertech.domain.enumeration.DocumentType;
 import com.hipstertech.service.CsvReaderService;
 
 @RestController
@@ -17,7 +18,7 @@ public class CsvResources {
 	
 	@GetMapping("/csv-get-doc/{docNum}/{serie}")
 	public void getDoc(@PathVariable int docNum,@PathVariable  int serie) {
-		csvReaderService.getDocumentByDocNumber(docNum, serie);
+		csvReaderService.getDocumentByDocNumber(docNum, serie,DocumentType.FE);
 	}
 	
 }
