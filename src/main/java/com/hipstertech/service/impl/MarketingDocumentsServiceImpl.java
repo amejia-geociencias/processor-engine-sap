@@ -1,20 +1,21 @@
 package com.hipstertech.service.impl;
 
-import com.hipstertech.service.MarketingDocumentsService;
-import com.hipstertech.domain.MarketingDocuments;
-import com.hipstertech.repository.MarketingDocumentsRepository;
-import com.hipstertech.service.dto.MarketingDocumentsDTO;
-import com.hipstertech.service.mapper.MarketingDocumentsMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.hipstertech.domain.MarketingDocuments;
+import com.hipstertech.domain.enumeration.Status;
+import com.hipstertech.repository.MarketingDocumentsRepository;
+import com.hipstertech.service.MarketingDocumentsService;
+import com.hipstertech.service.dto.MarketingDocumentsDTO;
+import com.hipstertech.service.mapper.MarketingDocumentsMapper;
 
 /**
  * Service Implementation for managing {@link MarketingDocuments}.
@@ -66,12 +67,11 @@ public class MarketingDocumentsServiceImpl implements MarketingDocumentsService 
         marketingDocumentsRepository.deleteById(id);
     }
     
-    @Override
-    @Transactional(readOnly = true)
-    public List<MarketingDocumentsDTO> findByJobAndStatus(Long idJob, String status) {
-        log.debug("Request to get all MarketingDocuments");
-        return marketingDocumentsRepository.findByJob_IdAndStatus(idJob,status).stream()
+	@Override
+	public List<MarketingDocumentsDTO> findByJobAndStatus(int idJob, Status status) {
+        log.debug("Request to get all findByJobAndStatus");
+        return marketingDocumentsRepository.findByJobIdAndStatus(idJob,status).stream()
             .map(marketingDocumentsMapper::toDto)
             .collect(Collectors.toCollection(LinkedList::new));
-    }
+	}
 }

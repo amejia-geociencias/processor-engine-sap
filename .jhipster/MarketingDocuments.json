@@ -18,18 +18,13 @@
     {
       "fieldName": "processedDate",
       "fieldType": "Instant"
-    }
-  ],
-  "relationships": [
+    },
     {
-      "relationshipType": "one-to-one",
-      "otherEntityName": "job",
-      "otherEntityRelationshipName": "marketingDocuments",
-      "relationshipName": "job",
-      "otherEntityField": "id",
-      "ownerSide": true
+      "fieldName": "jobId",
+      "fieldType": "Integer"
     }
   ],
+  "relationships": [],
   "changelogDate": "20201229011308",
   "entityTableName": "marketing_documents",
   "dto": "mapstruct",

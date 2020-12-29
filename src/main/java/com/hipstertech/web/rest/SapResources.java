@@ -1,29 +1,22 @@
 package com.hipstertech.web.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hipstertech.service.ServiceLayerClient;
+import com.hipstertech.service.RunService;
 
 @RestController
 @RequestMapping("/api")
 public class SapResources {
 	
 	@Autowired
-	ServiceLayerClient serviceLayerClient;
+	RunService RunServiceImpl;
 	
-    @GetMapping("/sap/login")
-    public void getLogin() {
-        serviceLayerClient.login();
+    @PostMapping("/sap/run/{id}")
+    public void getLogin(@PathVariable Long id) {
+    	RunServiceImpl.run(id);
     }
-    
-    
-    @GetMapping("/sap/invoices/{docNum}/{serie}")
-    public void getLogin(@PathVariable int docNum, @PathVariable int serie) {
-        serviceLayerClient.getDocumentByDocNumber(docNum, serie);
-    }
-
 }

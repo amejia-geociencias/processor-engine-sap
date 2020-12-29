@@ -47,6 +47,9 @@ public class MarketingDocumentsResourceIT {
     private static final Instant DEFAULT_PROCESSED_DATE = Instant.ofEpochMilli(0L);
     private static final Instant UPDATED_PROCESSED_DATE = Instant.now().truncatedTo(ChronoUnit.MILLIS);
 
+    private static final Integer DEFAULT_JOB_ID = 1;
+    private static final Integer UPDATED_JOB_ID = 2;
+
     @Autowired
     private MarketingDocumentsRepository marketingDocumentsRepository;
 
@@ -75,7 +78,8 @@ public class MarketingDocumentsResourceIT {
             .docNumber(DEFAULT_DOC_NUMBER)
             .status(DEFAULT_STATUS)
             .comments(DEFAULT_COMMENTS)
-            .processedDate(DEFAULT_PROCESSED_DATE);
+            .processedDate(DEFAULT_PROCESSED_DATE)
+            .jobId(DEFAULT_JOB_ID);
         return marketingDocuments;
     }
     /**
@@ -89,7 +93,8 @@ public class MarketingDocumentsResourceIT {
             .docNumber(UPDATED_DOC_NUMBER)
             .status(UPDATED_STATUS)
             .comments(UPDATED_COMMENTS)
-            .processedDate(UPDATED_PROCESSED_DATE);
+            .processedDate(UPDATED_PROCESSED_DATE)
+            .jobId(UPDATED_JOB_ID);
         return marketingDocuments;
     }
 
@@ -117,6 +122,7 @@ public class MarketingDocumentsResourceIT {
         assertThat(testMarketingDocuments.getStatus()).isEqualTo(DEFAULT_STATUS);
         assertThat(testMarketingDocuments.getComments()).isEqualTo(DEFAULT_COMMENTS);
         assertThat(testMarketingDocuments.getProcessedDate()).isEqualTo(DEFAULT_PROCESSED_DATE);
+        assertThat(testMarketingDocuments.getJobId()).isEqualTo(DEFAULT_JOB_ID);
     }
 
     @Test
@@ -154,7 +160,8 @@ public class MarketingDocumentsResourceIT {
             .andExpect(jsonPath("$.[*].docNumber").value(hasItem(DEFAULT_DOC_NUMBER)))
             .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.toString())))
             .andExpect(jsonPath("$.[*].comments").value(hasItem(DEFAULT_COMMENTS)))
-            .andExpect(jsonPath("$.[*].processedDate").value(hasItem(DEFAULT_PROCESSED_DATE.toString())));
+            .andExpect(jsonPath("$.[*].processedDate").value(hasItem(DEFAULT_PROCESSED_DATE.toString())))
+            .andExpect(jsonPath("$.[*].jobId").value(hasItem(DEFAULT_JOB_ID)));
     }
     
     @Test
@@ -171,7 +178,8 @@ public class MarketingDocumentsResourceIT {
             .andExpect(jsonPath("$.docNumber").value(DEFAULT_DOC_NUMBER))
             .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.toString()))
             .andExpect(jsonPath("$.comments").value(DEFAULT_COMMENTS))
-            .andExpect(jsonPath("$.processedDate").value(DEFAULT_PROCESSED_DATE.toString()));
+            .andExpect(jsonPath("$.processedDate").value(DEFAULT_PROCESSED_DATE.toString()))
+            .andExpect(jsonPath("$.jobId").value(DEFAULT_JOB_ID));
     }
     @Test
     @Transactional
@@ -197,7 +205,8 @@ public class MarketingDocumentsResourceIT {
             .docNumber(UPDATED_DOC_NUMBER)
             .status(UPDATED_STATUS)
             .comments(UPDATED_COMMENTS)
-            .processedDate(UPDATED_PROCESSED_DATE);
+            .processedDate(UPDATED_PROCESSED_DATE)
+            .jobId(UPDATED_JOB_ID);
         MarketingDocumentsDTO marketingDocumentsDTO = marketingDocumentsMapper.toDto(updatedMarketingDocuments);
 
         restMarketingDocumentsMockMvc.perform(put("/api/marketing-documents")
@@ -213,6 +222,7 @@ public class MarketingDocumentsResourceIT {
         assertThat(testMarketingDocuments.getStatus()).isEqualTo(UPDATED_STATUS);
         assertThat(testMarketingDocuments.getComments()).isEqualTo(UPDATED_COMMENTS);
         assertThat(testMarketingDocuments.getProcessedDate()).isEqualTo(UPDATED_PROCESSED_DATE);
+        assertThat(testMarketingDocuments.getJobId()).isEqualTo(UPDATED_JOB_ID);
     }
 
     @Test

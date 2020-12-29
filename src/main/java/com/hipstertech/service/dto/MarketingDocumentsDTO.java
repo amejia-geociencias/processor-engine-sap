@@ -24,8 +24,8 @@ public class MarketingDocumentsDTO implements Serializable {
 
     private Instant processedDate;
 
+    private Integer jobId;
 
-    private Long jobId;
     
     public Long getId() {
         return id;
@@ -67,11 +67,11 @@ public class MarketingDocumentsDTO implements Serializable {
         this.processedDate = processedDate;
     }
 
-    public Long getJobId() {
+    public Integer getJobId() {
         return jobId;
     }
 
-    public void setJobId(Long jobId) {
+    public void setJobId(Integer jobId) {
         this.jobId = jobId;
     }
 

@@ -27,11 +27,8 @@ entity MarketingDocuments {
 	docNumber Integer,
 	status Status,
 	comments String,
-	processedDate Instant
-}
-
-relationship OneToOne {
-	MarketingDocuments{job} to Job
+	processedDate Instant,
+    jobId Integer
 }
 
 

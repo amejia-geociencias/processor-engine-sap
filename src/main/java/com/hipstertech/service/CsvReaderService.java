@@ -21,14 +21,13 @@ import com.hipstertech.service.entities.DocumentLines;
 public class CsvReaderService {
 	private final Logger log = LoggerFactory.getLogger(CsvReaderService.class);
 	
-	@SuppressWarnings("unlikely-arg-type")
 	public Document getDocumentByDocNumber(int docNumber,int serie) {
 		Document document=null;
 		try {
 			List<DocumentLines> lines = new ArrayList<DocumentLines>();
 			Iterable<CSVRecord> csvRecords = parseFile();
 			for(CSVRecord record : csvRecords) {
-				if(record.get("OINV_DOCNUM").equals(docNumber)) {
+				if(record.get("OINV_DOCNUM").equals(docNumber+"")) {
 					if(document==null) {
 						document = setDocumentValues(record,serie);
 					}
@@ -66,6 +65,8 @@ public class CsvReaderService {
 		line.setSalesPersonCode(record.get("INV1_SLPCODE")==null?null:Integer.parseInt(record.get("INV1_SLPCODE")));
 		line.setTaxCode(record.get("INV1_TAXCODE"));
 		line.setUnitPrice(record.get("INV1_PRICEBEFDI")==null?null:Double.parseDouble(record.get("INV1_PRICEBEFDI").replace(",","")));
+		line.setItemCode(record.get("INV1_ITEMCODE"));
+		line.setActualBaseLine(record.get("INV1_BASELINE"));
 		return line;
 	}
 
@@ -92,6 +93,12 @@ public class CsvReaderService {
 		document.setU_NNE(record.get("OINV_U_NNE"));
 		document.setU_NPR(record.get("OINV_U_NPR"));
 		document.setU_NSP(record.get("OINV_U_NSP"));
+		document.setDocObjectCode("oInvoices");
+		document.setIssuingReason(Integer.parseInt(record.get("OINV_ISSREASON")));
+		document.setRelatedType(Integer.parseInt(record.get("OINV_RELATEDTYP")));
+		document.setU_GTI_MOTIVOS(Integer.parseInt(record.get("OINV_U_GTI_MOTIVOS")));
+		document.setU_TipoExon(Integer.parseInt(record.get("OINV_U_TIPOEXON")));
+		
 		document.setSeries(serie);
 		return document;
 	}

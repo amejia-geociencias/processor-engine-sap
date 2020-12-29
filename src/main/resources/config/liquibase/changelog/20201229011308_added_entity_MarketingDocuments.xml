@@ -28,8 +28,8 @@
             <column name="processed_date" type="datetime">
                 <constraints nullable="true" />
             </column>
-            <column name="job_id" type="bigint">
-                <constraints unique="true" nullable="true" uniqueConstraintName="ux_marketing_documents_job_id" />
+            <column name="job_id" type="integer">
+                <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
@@ -59,6 +59,7 @@
             <column name="status" type="string"/>
             <column name="comments" type="string"/>
             <column name="processed_date" type="datetime"/>
+            <column name="job_id" type="numeric"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

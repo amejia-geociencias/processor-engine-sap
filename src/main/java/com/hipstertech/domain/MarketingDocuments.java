@@ -37,9 +37,8 @@ public class MarketingDocuments implements Serializable {
     @Column(name = "processed_date")
     private Instant processedDate;
 
-    @OneToOne
-    @JoinColumn(unique = true)
-    private Job job;
+    @Column(name = "job_id")
+    private Integer jobId;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -102,17 +101,17 @@ public class MarketingDocuments implements Serializable {
         this.processedDate = processedDate;
     }
 
-    public Job getJob() {
-        return job;
+    public Integer getJobId() {
+        return jobId;
     }
 
-    public MarketingDocuments job(Job job) {
-        this.job = job;
+    public MarketingDocuments jobId(Integer jobId) {
+        this.jobId = jobId;
         return this;
     }
 
-    public void setJob(Job job) {
-        this.job = job;
+    public void setJobId(Integer jobId) {
+        this.jobId = jobId;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
@@ -141,6 +140,7 @@ public class MarketingDocuments implements Serializable {
             ", status='" + getStatus() + "'" +
             ", comments='" + getComments() + "'" +
             ", processedDate='" + getProcessedDate() + "'" +
+            ", jobId=" + getJobId() +
             "}";
     }
 }

@@ -20,7 +20,7 @@ public class Document implements Serializable {
 	public String AgentCode;
 
 
-	public int AnnualInvoiceDeclarationReference;
+	public Integer AnnualInvoiceDeclarationReference;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -47,7 +47,7 @@ public class Document implements Serializable {
 	public String ATDocumentType;
 
 
-	public int AttachmentEntry;
+	public Integer AttachmentEntry;
 
 	public String AuthorizationCode;
 
@@ -58,13 +58,13 @@ public class Document implements Serializable {
 	public String AuthorizationStatus;
 
 
-	public double BaseAmount;
+	public Double BaseAmount;
 
 
-	public double BaseAmountFC;
+	public Double BaseAmountFC;
 
 
-	public double BaseAmountSC;
+	public Double BaseAmountSC;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -73,7 +73,7 @@ public class Document implements Serializable {
 	public String BillOfExchangeReserved;
 
 
-	public int BlanketAgreementNumber;
+	public Integer BlanketAgreementNumber;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -88,10 +88,10 @@ public class Document implements Serializable {
 	public String BPChannelCode;
 
 
-	public int BPChannelContact;
+	public Integer BPChannelContact;
 
 
-	public int BPL_IDAssignedToInvoice;
+	public Integer BPL_IDAssignedToInvoice;
 
 
 	public String BPLName;
@@ -118,7 +118,7 @@ public class Document implements Serializable {
 	public String CardName;
 
 
-	public int CashDiscountDateOffset;
+	public Integer CashDiscountDateOffset;
 
 
 	public String CentralBankIndicator;
@@ -160,7 +160,7 @@ public class Document implements Serializable {
 	public String Confirmed;
 
 
-	public int ContactPersonCode;
+	public Integer ContactPersonCode;
 
 
 	public String ControlAccount;
@@ -184,7 +184,7 @@ public class Document implements Serializable {
 	public String DeferredTax;
 
 
-	public double DiscountPercent;
+	public Double DiscountPercent;
 
 
 	public String DocCurrency;
@@ -196,28 +196,28 @@ public class Document implements Serializable {
 	public Date DocDueDate;
 
 
-	public int DocEntry;
+	public Integer DocEntry;
 
 
-	public int DocNum;
+	public Integer DocNum;
 
 
 	public String DocObjectCode;
 
 
-	public double DocRate;
+	public Double DocRate;
 
 
 	//public Instant DocTime;
 
 
-	public double DocTotal;
+	public Double DocTotal;
 
 
-	public double DocTotalFc;
+	public Double DocTotalFc;
 
 
-	public double DocTotalSys;
+	public Double DocTotalSys;
 
 	/// <summary>
 	/// Enumeration: BoDocumentTypes. 
@@ -234,7 +234,7 @@ public class Document implements Serializable {
 
 	public List<DocumentLines> DocumentLines;
 
-	public int DocumentsOwner;
+	public Integer DocumentsOwner;
 
 
 	/// <summary>
@@ -253,19 +253,19 @@ public class Document implements Serializable {
 	public String DocumentTaxID;
 
 
-	public double DownPayment;
+	public Double DownPayment;
 
 
-	public double DownPaymentAmount;
+	public Double DownPaymentAmount;
 
 
-	public double DownPaymentAmountFC;
+	public Double DownPaymentAmountFC;
 
 
-	public double DownPaymentAmountSC;
+	public Double DownPaymentAmountSC;
 
 
-	public double DownPaymentPercentage;
+	public Double DownPaymentPercentage;
 
 	/// <summary>
 	/// Enumeration: BoSoStatus. 
@@ -295,7 +295,7 @@ public class Document implements Serializable {
 	public String EDocErrorMessage;
 
 
-	public int EDocExportFormat;
+	public Integer EDocExportFormat;
 
 	/// <summary>
 	/// Enumeration: EDocGenerationTypeEnum. 
@@ -307,7 +307,7 @@ public class Document implements Serializable {
 	public String EDocNum;
 
 
-	public int EDocSeries;
+	public Integer EDocSeries;
 
 	/// <summary>
 	/// Enumeration: EDocStatusEnum. 
@@ -334,7 +334,7 @@ public class Document implements Serializable {
 	public String ETaxNumber;
 
 
-	public int ETaxWebSite;
+	public Integer ETaxWebSite;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -352,37 +352,37 @@ public class Document implements Serializable {
 	public String ExternalCorrectedDocNum;
 
 
-	public int ExtraDays;
+	public Integer ExtraDays;
 
 
-	public int ExtraMonth;
+	public Integer ExtraMonth;
 
 
 	public String FederalTaxID;
 
 
-	public int FinancialPeriod;
+	public Integer FinancialPeriod;
 
 
 	public String FiscalDocNum;
 
 
-	public int FolioNumber;
+	public Integer FolioNumber;
 
 
-	public int FolioNumberFrom;
+	public Integer FolioNumberFrom;
 
 
-	public int FolioNumberTo;
+	public Integer FolioNumberTo;
 
 
 	public String FolioPrefixString;
 
 
-	public int Form1099;
+	public Integer Form1099;
 
 
-	public double GrosProfit;
+	public Double GrosProfit;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -391,10 +391,10 @@ public class Document implements Serializable {
 	public String GroupHandWritten;
 
 
-	public int GroupNumber;
+	public Integer GroupNumber;
 
 
-	public int GroupSeries;
+	public Integer GroupSeries;
 
 	/// <summary>
 	/// Enumeration: GSTTransactionTypeEnum. 
@@ -403,10 +403,10 @@ public class Document implements Serializable {
 	public String GSTTransactionType;
 
 
-	public int GTSChecker;
+	public Integer GTSChecker;
 
 
-	public int GTSPayee;
+	public Integer GTSPayee;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -415,7 +415,7 @@ public class Document implements Serializable {
 	public String HandWritten;
 
 
-	public int ImportFileNum;
+	public Integer ImportFileNum;
 
 
 	public String Indicator;
@@ -427,13 +427,13 @@ public class Document implements Serializable {
 	public String InsuranceOperation347;
 
 	/// <summary>
-	/// Enumeration: BoInterimDocTypes. 
+	/// Enumeration: BoIntegererimDocTypes. 
 	/// </summary>
 
-	public String InterimType;
+	public String IntegererimType;
 
 
-	public int InternalCorrectedDocNum;
+	public Integer IntegerernalCorrectedDocNum;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -448,13 +448,13 @@ public class Document implements Serializable {
 	public String IsPayToBank;
 
 
-	public int IssuingReason;
+	public Integer IssuingReason;
 
 
 	public String JournalMemo;
 
 
-	public int LanguageCode;
+	public Integer LanguageCode;
 
 	/// <summary>
 	/// Enumeration: FolioLetterEnum. 
@@ -478,7 +478,7 @@ public class Document implements Serializable {
 	public String NetProcedure;
 
 
-	public int NextCorrectingDocument;
+	public Integer NextCorrectingDocument;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -493,7 +493,7 @@ public class Document implements Serializable {
 	public String NumAtCard;
 
 
-	public int NumberOfInstallments;
+	public Integer NumberOfInstallments;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -529,10 +529,10 @@ public class Document implements Serializable {
 	public String PaymentBlock;
 
 
-	public int PaymentBlockEntry;
+	public Integer PaymentBlockEntry;
 
 
-	public int PaymentGroupCode;
+	public Integer PaymentGroupCode;
 
 
 	public String PaymentMethod;
@@ -574,16 +574,16 @@ public class Document implements Serializable {
 	public String PickStatus;
 
 
-	public String PointOfIssueCode;
+	public String PoIntegerOfIssueCode;
 
 
-	public int POS_CashRegister;
+	public Integer POS_CashRegister;
 
 
-	public int POSCashierNumber;
+	public Integer POSCashierNumber;
 
 
-	public int POSDailySummaryNo;
+	public Integer POSDailySummaryNo;
 
 
 	public String POSEquipmentNumber;
@@ -592,28 +592,28 @@ public class Document implements Serializable {
 	public String POSManufacturerSerialNumber;
 
 
-	public int POSReceiptNo;
+	public Integer POSReceiptNo;
 
 	/// <summary>
-	/// Enumeration: PrintStatusEnum. 
+	/// Enumeration: PrIntegerStatusEnum. 
 	/// </summary>
 
-	public String Printed;
+	public String PrIntegered;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
 	/// </summary>
 
-	public String PrintSEPADirect;
+	public String PrIntegerSEPADirect;
 
 
-	public int PrivateKeyVersion;
+	public Integer PrivateKeyVersion;
 
 
 	public String Project;
 
 
-	public int Receiver;
+	public Integer Receiver;
 
 
 	public String Reference1;
@@ -622,13 +622,13 @@ public class Document implements Serializable {
 	public String Reference2;
 
 
-	public int RelatedEntry;
+	public Integer RelatedEntry;
 
 
-	public int RelatedType;
+	public Integer RelatedType;
 
 
-	public int Releaser;
+	public Integer Releaser;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -652,16 +652,16 @@ public class Document implements Serializable {
 	public String ReportingSectionControlStatementVAT;
 
 
-	public int ReqType;
+	public Integer ReqType;
 
 
 	public String Requester;
 
 
-	public int RequesterBranch;
+	public Integer RequesterBranch;
 
 
-	public int RequesterDepartment;
+	public Integer RequesterDepartment;
 
 
 	public String RequesterEmail;
@@ -715,19 +715,19 @@ public class Document implements Serializable {
 	public String Rounding;
 
 
-	public double RoundingDiffAmount;
+	public Double RoundingDiffAmount;
 
 
-	public double RoundingDiffAmountFC;
+	public Double RoundingDiffAmountFC;
 
 
-	public double RoundingDiffAmountSC;
+	public Double RoundingDiffAmountSC;
 
 
-	public int SalesPersonCode;
+	public Integer SalesPersonCode;
 
 
-	public int Segment;
+	public Integer Segment;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -736,22 +736,22 @@ public class Document implements Serializable {
 	public String SendNotification;
 
 
-	public int SequenceCode;
+	public Integer SequenceCode;
 
 
 	public String SequenceModel;
 
 
-	public int SequenceSerial;
+	public Integer SequenceSerial;
 
 
-	public int Series;
+	public Integer Series;
 
 
 	public String SeriesString;
 
 
-	public double ServiceGrossProfitPercent;
+	public Double ServiceGrossProfitPercent;
 
 
 	public String ShipFrom;
@@ -820,31 +820,31 @@ public class Document implements Serializable {
 	public String TaxInvoiceNo;
 
 
-	public double TotalDiscount;
+	public Double TotalDiscount;
 
 
-	public double TotalDiscountFC;
+	public Double TotalDiscountFC;
 
 
-	public double TotalDiscountSC;
+	public Double TotalDiscountSC;
 
 
-	public double TotalEqualizationTax;
+	public Double TotalEqualizationTax;
 
 
-	public double TotalEqualizationTaxFC;
+	public Double TotalEqualizationTaxFC;
 
 
-	public double TotalEqualizationTaxSC;
+	public Double TotalEqualizationTaxSC;
 
 
 	public String TrackingNumber;
 
 
-	public int TransNum;
+	public Integer TransNum;
 
 
-	public int TransportationCode;
+	public Integer TransportationCode;
 
 
 	public String U_AgeCob;
@@ -853,7 +853,7 @@ public class Document implements Serializable {
 	public String U_Agencia;
 
 
-	public String U_AplInt;
+	public String U_AplInteger;
 
 
 	public String U_BDOC;
@@ -880,7 +880,7 @@ public class Document implements Serializable {
 	public String U_Consignacion;
 
 
-	public int U_Contrato;
+	public Integer U_Contrato;
 
 
 	public Date U_DocEntrega;
@@ -907,10 +907,10 @@ public class Document implements Serializable {
 	public String U_FormPag;
 
 
-	public int U_GTI_ID;
+	public Integer U_GTI_ID;
 
 
-	public int U_GTI_MOTIVOS;
+	public Integer U_GTI_MOTIVOS;
 
 
 	public String U_INCOTERM;
@@ -964,16 +964,16 @@ public class Document implements Serializable {
 	public String U_REFDOC;
 
 
-	public int U_RefInt;
+	public Integer U_RefInteger;
 
 
-	public int U_SCG_Com;
+	public Integer U_SCG_Com;
 
 
 	public String U_SCGCOM_CalCom;
 
 
-	public int U_SCGRMS_Caja;
+	public Integer U_SCGRMS_Caja;
 
 
 	public Date U_SCGRMS_FechaUpdt;
@@ -982,16 +982,16 @@ public class Document implements Serializable {
 	public String U_SCGRMS_Filler2;
 
 
-	public int U_SCGRMS_IdDoc;
+	public Integer U_SCGRMS_IdDoc;
 
 
-	public int U_SCGRMS_Jornada;
+	public Integer U_SCGRMS_Jornada;
 
 
 	public String U_SCGRMS_NmbCaja;
 
 
-	public int U_SCGRMS_NumDoc;
+	public Integer U_SCGRMS_NumDoc;
 
 
 	public String U_SCGRMS_NumDocLey;
@@ -1048,13 +1048,13 @@ public class Document implements Serializable {
 	public String U_Sucursal;
 
 
-	public int U_Suscriptor;
+	public Integer U_Suscriptor;
 
 
 	public String U_TipoDoc;
 
 
-	public int U_TipoExon;
+	public Integer U_TipoExon;
 
 
 	public String U_U_BREF;
@@ -1111,19 +1111,19 @@ public class Document implements Serializable {
 	public Date VatDate;
 
 
-	public double VatPercent;
+	public Double VatPercent;
 
 
 	public String VATRegNum;
 
 
-	public double VatSum;
+	public Double VatSum;
 
 
-	public double VatSumFc;
+	public Double VatSumFc;
 
 
-	public double VatSumSys;
+	public Double VatSumSys;
 
 
 	public String VehiclePlate;
@@ -1135,40 +1135,40 @@ public class Document implements Serializable {
 	public String WareHouseUpdateType;
 
 
-	public double WTAmount;
+	public Double WTAmount;
 
 
-	public double WTAmountFC;
+	public Double WTAmountFC;
 
 
-	public double WTAmountSC;
+	public Double WTAmountSC;
 
 
-	public double WTApplied;
+	public Double WTApplied;
 
 
-	public double WTAppliedFC;
+	public Double WTAppliedFC;
 
 
-	public double WTAppliedSC;
+	public Double WTAppliedSC;
 
 
-	public double WTExemptedAmount;
+	public Double WTExemptedAmount;
 
 
-	public double WTExemptedAmountFC;
+	public Double WTExemptedAmountFC;
 
 
-	public double WTExemptedAmountSC;
+	public Double WTExemptedAmountSC;
 
 
-	public double WTNonSubjectAmount;
+	public Double WTNonSubjectAmount;
 
 
-	public double WTNonSubjectAmountFC;
+	public Double WTNonSubjectAmountFC;
 
 
-	public double WTNonSubjectAmountSC;
+	public Double WTNonSubjectAmountSC;
 
 
 	public String getAddress() {
@@ -1201,12 +1201,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getAnnualInvoiceDeclarationReference() {
+	public Integer getAnnualInvoiceDeclarationReference() {
 		return AnnualInvoiceDeclarationReference;
 	}
 
 
-	public void setAnnualInvoiceDeclarationReference(int annualInvoiceDeclarationReference) {
+	public void setAnnualInvoiceDeclarationReference(Integer annualInvoiceDeclarationReference) {
 		AnnualInvoiceDeclarationReference = annualInvoiceDeclarationReference;
 	}
 
@@ -1261,12 +1261,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getAttachmentEntry() {
+	public Integer getAttachmentEntry() {
 		return AttachmentEntry;
 	}
 
 
-	public void setAttachmentEntry(int attachmentEntry) {
+	public void setAttachmentEntry(Integer attachmentEntry) {
 		AttachmentEntry = attachmentEntry;
 	}
 
@@ -1291,32 +1291,32 @@ public class Document implements Serializable {
 	}
 
 
-	public double getBaseAmount() {
+	public Double getBaseAmount() {
 		return BaseAmount;
 	}
 
 
-	public void setBaseAmount(double baseAmount) {
+	public void setBaseAmount(Double baseAmount) {
 		BaseAmount = baseAmount;
 	}
 
 
-	public double getBaseAmountFC() {
+	public Double getBaseAmountFC() {
 		return BaseAmountFC;
 	}
 
 
-	public void setBaseAmountFC(double baseAmountFC) {
+	public void setBaseAmountFC(Double baseAmountFC) {
 		BaseAmountFC = baseAmountFC;
 	}
 
 
-	public double getBaseAmountSC() {
+	public Double getBaseAmountSC() {
 		return BaseAmountSC;
 	}
 
 
-	public void setBaseAmountSC(double baseAmountSC) {
+	public void setBaseAmountSC(Double baseAmountSC) {
 		BaseAmountSC = baseAmountSC;
 	}
 
@@ -1331,12 +1331,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getBlanketAgreementNumber() {
+	public Integer getBlanketAgreementNumber() {
 		return BlanketAgreementNumber;
 	}
 
 
-	public void setBlanketAgreementNumber(int blanketAgreementNumber) {
+	public void setBlanketAgreementNumber(Integer blanketAgreementNumber) {
 		BlanketAgreementNumber = blanketAgreementNumber;
 	}
 
@@ -1371,22 +1371,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getBPChannelContact() {
+	public Integer getBPChannelContact() {
 		return BPChannelContact;
 	}
 
 
-	public void setBPChannelContact(int bPChannelContact) {
+	public void setBPChannelContact(Integer bPChannelContact) {
 		BPChannelContact = bPChannelContact;
 	}
 
 
-	public int getBPL_IDAssignedToInvoice() {
+	public Integer getBPL_IDAssignedToInvoice() {
 		return BPL_IDAssignedToInvoice;
 	}
 
 
-	public void setBPL_IDAssignedToInvoice(int bPL_IDAssignedToInvoice) {
+	public void setBPL_IDAssignedToInvoice(Integer bPL_IDAssignedToInvoice) {
 		BPL_IDAssignedToInvoice = bPL_IDAssignedToInvoice;
 	}
 
@@ -1451,12 +1451,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getCashDiscountDateOffset() {
+	public Integer getCashDiscountDateOffset() {
 		return CashDiscountDateOffset;
 	}
 
 
-	public void setCashDiscountDateOffset(int cashDiscountDateOffset) {
+	public void setCashDiscountDateOffset(Integer cashDiscountDateOffset) {
 		CashDiscountDateOffset = cashDiscountDateOffset;
 	}
 
@@ -1551,12 +1551,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getContactPersonCode() {
+	public Integer getContactPersonCode() {
 		return ContactPersonCode;
 	}
 
 
-	public void setContactPersonCode(int contactPersonCode) {
+	public void setContactPersonCode(Integer contactPersonCode) {
 		ContactPersonCode = contactPersonCode;
 	}
 
@@ -1611,12 +1611,12 @@ public class Document implements Serializable {
 	}
 
 
-	public double getDiscountPercent() {
+	public Double getDiscountPercent() {
 		return DiscountPercent;
 	}
 
 
-	public void setDiscountPercent(double discountPercent) {
+	public void setDiscountPercent(Double discountPercent) {
 		DiscountPercent = discountPercent;
 	}
 
@@ -1651,22 +1651,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getDocEntry() {
+	public Integer getDocEntry() {
 		return DocEntry;
 	}
 
 
-	public void setDocEntry(int docEntry) {
+	public void setDocEntry(Integer docEntry) {
 		DocEntry = docEntry;
 	}
 
 
-	public int getDocNum() {
+	public Integer getDocNum() {
 		return DocNum;
 	}
 
 
-	public void setDocNum(int docNum) {
+	public void setDocNum(Integer docNum) {
 		DocNum = docNum;
 	}
 
@@ -1681,12 +1681,12 @@ public class Document implements Serializable {
 	}
 
 
-	public double getDocRate() {
+	public Double getDocRate() {
 		return DocRate;
 	}
 
 
-	public void setDocRate(double docRate) {
+	public void setDocRate(Double docRate) {
 		DocRate = docRate;
 	}
 
@@ -1701,32 +1701,32 @@ public class Document implements Serializable {
 //	}
 
 
-	public double getDocTotal() {
+	public Double getDocTotal() {
 		return DocTotal;
 	}
 
 
-	public void setDocTotal(double docTotal) {
+	public void setDocTotal(Double docTotal) {
 		DocTotal = docTotal;
 	}
 
 
-	public double getDocTotalFc() {
+	public Double getDocTotalFc() {
 		return DocTotalFc;
 	}
 
 
-	public void setDocTotalFc(double docTotalFc) {
+	public void setDocTotalFc(Double docTotalFc) {
 		DocTotalFc = docTotalFc;
 	}
 
 
-	public double getDocTotalSys() {
+	public Double getDocTotalSys() {
 		return DocTotalSys;
 	}
 
 
-	public void setDocTotalSys(double docTotalSys) {
+	public void setDocTotalSys(Double docTotalSys) {
 		DocTotalSys = docTotalSys;
 	}
 
@@ -1761,12 +1761,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getDocumentsOwner() {
+	public Integer getDocumentsOwner() {
 		return DocumentsOwner;
 	}
 
 
-	public void setDocumentsOwner(int documentsOwner) {
+	public void setDocumentsOwner(Integer documentsOwner) {
 		DocumentsOwner = documentsOwner;
 	}
 
@@ -1801,52 +1801,52 @@ public class Document implements Serializable {
 	}
 
 
-	public double getDownPayment() {
+	public Double getDownPayment() {
 		return DownPayment;
 	}
 
 
-	public void setDownPayment(double downPayment) {
+	public void setDownPayment(Double downPayment) {
 		DownPayment = downPayment;
 	}
 
 
-	public double getDownPaymentAmount() {
+	public Double getDownPaymentAmount() {
 		return DownPaymentAmount;
 	}
 
 
-	public void setDownPaymentAmount(double downPaymentAmount) {
+	public void setDownPaymentAmount(Double downPaymentAmount) {
 		DownPaymentAmount = downPaymentAmount;
 	}
 
 
-	public double getDownPaymentAmountFC() {
+	public Double getDownPaymentAmountFC() {
 		return DownPaymentAmountFC;
 	}
 
 
-	public void setDownPaymentAmountFC(double downPaymentAmountFC) {
+	public void setDownPaymentAmountFC(Double downPaymentAmountFC) {
 		DownPaymentAmountFC = downPaymentAmountFC;
 	}
 
 
-	public double getDownPaymentAmountSC() {
+	public Double getDownPaymentAmountSC() {
 		return DownPaymentAmountSC;
 	}
 
 
-	public void setDownPaymentAmountSC(double downPaymentAmountSC) {
+	public void setDownPaymentAmountSC(Double downPaymentAmountSC) {
 		DownPaymentAmountSC = downPaymentAmountSC;
 	}
 
 
-	public double getDownPaymentPercentage() {
+	public Double getDownPaymentPercentage() {
 		return DownPaymentPercentage;
 	}
 
 
-	public void setDownPaymentPercentage(double downPaymentPercentage) {
+	public void setDownPaymentPercentage(Double downPaymentPercentage) {
 		DownPaymentPercentage = downPaymentPercentage;
 	}
 
@@ -1921,12 +1921,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getEDocExportFormat() {
+	public Integer getEDocExportFormat() {
 		return EDocExportFormat;
 	}
 
 
-	public void setEDocExportFormat(int eDocExportFormat) {
+	public void setEDocExportFormat(Integer eDocExportFormat) {
 		EDocExportFormat = eDocExportFormat;
 	}
 
@@ -1951,12 +1951,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getEDocSeries() {
+	public Integer getEDocSeries() {
 		return EDocSeries;
 	}
 
 
-	public void setEDocSeries(int eDocSeries) {
+	public void setEDocSeries(Integer eDocSeries) {
 		EDocSeries = eDocSeries;
 	}
 
@@ -2021,12 +2021,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getETaxWebSite() {
+	public Integer getETaxWebSite() {
 		return ETaxWebSite;
 	}
 
 
-	public void setETaxWebSite(int eTaxWebSite) {
+	public void setETaxWebSite(Integer eTaxWebSite) {
 		ETaxWebSite = eTaxWebSite;
 	}
 
@@ -2071,22 +2071,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getExtraDays() {
+	public Integer getExtraDays() {
 		return ExtraDays;
 	}
 
 
-	public void setExtraDays(int extraDays) {
+	public void setExtraDays(Integer extraDays) {
 		ExtraDays = extraDays;
 	}
 
 
-	public int getExtraMonth() {
+	public Integer getExtraMonth() {
 		return ExtraMonth;
 	}
 
 
-	public void setExtraMonth(int extraMonth) {
+	public void setExtraMonth(Integer extraMonth) {
 		ExtraMonth = extraMonth;
 	}
 
@@ -2101,12 +2101,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getFinancialPeriod() {
+	public Integer getFinancialPeriod() {
 		return FinancialPeriod;
 	}
 
 
-	public void setFinancialPeriod(int financialPeriod) {
+	public void setFinancialPeriod(Integer financialPeriod) {
 		FinancialPeriod = financialPeriod;
 	}
 
@@ -2121,32 +2121,32 @@ public class Document implements Serializable {
 	}
 
 
-	public int getFolioNumber() {
+	public Integer getFolioNumber() {
 		return FolioNumber;
 	}
 
 
-	public void setFolioNumber(int folioNumber) {
+	public void setFolioNumber(Integer folioNumber) {
 		FolioNumber = folioNumber;
 	}
 
 
-	public int getFolioNumberFrom() {
+	public Integer getFolioNumberFrom() {
 		return FolioNumberFrom;
 	}
 
 
-	public void setFolioNumberFrom(int folioNumberFrom) {
+	public void setFolioNumberFrom(Integer folioNumberFrom) {
 		FolioNumberFrom = folioNumberFrom;
 	}
 
 
-	public int getFolioNumberTo() {
+	public Integer getFolioNumberTo() {
 		return FolioNumberTo;
 	}
 
 
-	public void setFolioNumberTo(int folioNumberTo) {
+	public void setFolioNumberTo(Integer folioNumberTo) {
 		FolioNumberTo = folioNumberTo;
 	}
 
@@ -2161,22 +2161,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getForm1099() {
+	public Integer getForm1099() {
 		return Form1099;
 	}
 
 
-	public void setForm1099(int form1099) {
+	public void setForm1099(Integer form1099) {
 		Form1099 = form1099;
 	}
 
 
-	public double getGrosProfit() {
+	public Double getGrosProfit() {
 		return GrosProfit;
 	}
 
 
-	public void setGrosProfit(double grosProfit) {
+	public void setGrosProfit(Double grosProfit) {
 		GrosProfit = grosProfit;
 	}
 
@@ -2191,22 +2191,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getGroupNumber() {
+	public Integer getGroupNumber() {
 		return GroupNumber;
 	}
 
 
-	public void setGroupNumber(int groupNumber) {
+	public void setGroupNumber(Integer groupNumber) {
 		GroupNumber = groupNumber;
 	}
 
 
-	public int getGroupSeries() {
+	public Integer getGroupSeries() {
 		return GroupSeries;
 	}
 
 
-	public void setGroupSeries(int groupSeries) {
+	public void setGroupSeries(Integer groupSeries) {
 		GroupSeries = groupSeries;
 	}
 
@@ -2221,22 +2221,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getGTSChecker() {
+	public Integer getGTSChecker() {
 		return GTSChecker;
 	}
 
 
-	public void setGTSChecker(int gTSChecker) {
+	public void setGTSChecker(Integer gTSChecker) {
 		GTSChecker = gTSChecker;
 	}
 
 
-	public int getGTSPayee() {
+	public Integer getGTSPayee() {
 		return GTSPayee;
 	}
 
 
-	public void setGTSPayee(int gTSPayee) {
+	public void setGTSPayee(Integer gTSPayee) {
 		GTSPayee = gTSPayee;
 	}
 
@@ -2251,12 +2251,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getImportFileNum() {
+	public Integer getImportFileNum() {
 		return ImportFileNum;
 	}
 
 
-	public void setImportFileNum(int importFileNum) {
+	public void setImportFileNum(Integer importFileNum) {
 		ImportFileNum = importFileNum;
 	}
 
@@ -2281,23 +2281,23 @@ public class Document implements Serializable {
 	}
 
 
-	public String getInterimType() {
-		return InterimType;
+	public String getIntegererimType() {
+		return IntegererimType;
 	}
 
 
-	public void setInterimType(String interimType) {
-		InterimType = interimType;
+	public void setIntegererimType(String IntegererimType) {
+		IntegererimType = IntegererimType;
 	}
 
 
-	public int getInternalCorrectedDocNum() {
-		return InternalCorrectedDocNum;
+	public Integer getIntegerernalCorrectedDocNum() {
+		return IntegerernalCorrectedDocNum;
 	}
 
 
-	public void setInternalCorrectedDocNum(int internalCorrectedDocNum) {
-		InternalCorrectedDocNum = internalCorrectedDocNum;
+	public void setIntegerernalCorrectedDocNum(Integer IntegerernalCorrectedDocNum) {
+		IntegerernalCorrectedDocNum = IntegerernalCorrectedDocNum;
 	}
 
 
@@ -2321,12 +2321,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getIssuingReason() {
+	public Integer getIssuingReason() {
 		return IssuingReason;
 	}
 
 
-	public void setIssuingReason(int issuingReason) {
+	public void setIssuingReason(Integer issuingReason) {
 		IssuingReason = issuingReason;
 	}
 
@@ -2341,12 +2341,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getLanguageCode() {
+	public Integer getLanguageCode() {
 		return LanguageCode;
 	}
 
 
-	public void setLanguageCode(int languageCode) {
+	public void setLanguageCode(Integer languageCode) {
 		LanguageCode = languageCode;
 	}
 
@@ -2391,12 +2391,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getNextCorrectingDocument() {
+	public Integer getNextCorrectingDocument() {
 		return NextCorrectingDocument;
 	}
 
 
-	public void setNextCorrectingDocument(int nextCorrectingDocument) {
+	public void setNextCorrectingDocument(Integer nextCorrectingDocument) {
 		NextCorrectingDocument = nextCorrectingDocument;
 	}
 
@@ -2431,12 +2431,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getNumberOfInstallments() {
+	public Integer getNumberOfInstallments() {
 		return NumberOfInstallments;
 	}
 
 
-	public void setNumberOfInstallments(int numberOfInstallments) {
+	public void setNumberOfInstallments(Integer numberOfInstallments) {
 		NumberOfInstallments = numberOfInstallments;
 	}
 
@@ -2521,22 +2521,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getPaymentBlockEntry() {
+	public Integer getPaymentBlockEntry() {
 		return PaymentBlockEntry;
 	}
 
 
-	public void setPaymentBlockEntry(int paymentBlockEntry) {
+	public void setPaymentBlockEntry(Integer paymentBlockEntry) {
 		PaymentBlockEntry = paymentBlockEntry;
 	}
 
 
-	public int getPaymentGroupCode() {
+	public Integer getPaymentGroupCode() {
 		return PaymentGroupCode;
 	}
 
 
-	public void setPaymentGroupCode(int paymentGroupCode) {
+	public void setPaymentGroupCode(Integer paymentGroupCode) {
 		PaymentGroupCode = paymentGroupCode;
 	}
 
@@ -2651,42 +2651,42 @@ public class Document implements Serializable {
 	}
 
 
-	public String getPointOfIssueCode() {
-		return PointOfIssueCode;
+	public String getPoIntegerOfIssueCode() {
+		return PoIntegerOfIssueCode;
 	}
 
 
-	public void setPointOfIssueCode(String pointOfIssueCode) {
-		PointOfIssueCode = pointOfIssueCode;
+	public void setPoIntegerOfIssueCode(String poIntegerOfIssueCode) {
+		PoIntegerOfIssueCode = poIntegerOfIssueCode;
 	}
 
 
-	public int getPOS_CashRegister() {
+	public Integer getPOS_CashRegister() {
 		return POS_CashRegister;
 	}
 
 
-	public void setPOS_CashRegister(int pOS_CashRegister) {
+	public void setPOS_CashRegister(Integer pOS_CashRegister) {
 		POS_CashRegister = pOS_CashRegister;
 	}
 
 
-	public int getPOSCashierNumber() {
+	public Integer getPOSCashierNumber() {
 		return POSCashierNumber;
 	}
 
 
-	public void setPOSCashierNumber(int pOSCashierNumber) {
+	public void setPOSCashierNumber(Integer pOSCashierNumber) {
 		POSCashierNumber = pOSCashierNumber;
 	}
 
 
-	public int getPOSDailySummaryNo() {
+	public Integer getPOSDailySummaryNo() {
 		return POSDailySummaryNo;
 	}
 
 
-	public void setPOSDailySummaryNo(int pOSDailySummaryNo) {
+	public void setPOSDailySummaryNo(Integer pOSDailySummaryNo) {
 		POSDailySummaryNo = pOSDailySummaryNo;
 	}
 
@@ -2711,42 +2711,42 @@ public class Document implements Serializable {
 	}
 
 
-	public int getPOSReceiptNo() {
+	public Integer getPOSReceiptNo() {
 		return POSReceiptNo;
 	}
 
 
-	public void setPOSReceiptNo(int pOSReceiptNo) {
+	public void setPOSReceiptNo(Integer pOSReceiptNo) {
 		POSReceiptNo = pOSReceiptNo;
 	}
 
 
-	public String getPrinted() {
-		return Printed;
+	public String getPrIntegered() {
+		return PrIntegered;
 	}
 
 
-	public void setPrinted(String printed) {
-		Printed = printed;
+	public void setPrIntegered(String prIntegered) {
+		PrIntegered = prIntegered;
 	}
 
 
-	public String getPrintSEPADirect() {
-		return PrintSEPADirect;
+	public String getPrIntegerSEPADirect() {
+		return PrIntegerSEPADirect;
 	}
 
 
-	public void setPrintSEPADirect(String printSEPADirect) {
-		PrintSEPADirect = printSEPADirect;
+	public void setPrIntegerSEPADirect(String prIntegerSEPADirect) {
+		PrIntegerSEPADirect = prIntegerSEPADirect;
 	}
 
 
-	public int getPrivateKeyVersion() {
+	public Integer getPrivateKeyVersion() {
 		return PrivateKeyVersion;
 	}
 
 
-	public void setPrivateKeyVersion(int privateKeyVersion) {
+	public void setPrivateKeyVersion(Integer privateKeyVersion) {
 		PrivateKeyVersion = privateKeyVersion;
 	}
 
@@ -2761,12 +2761,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getReceiver() {
+	public Integer getReceiver() {
 		return Receiver;
 	}
 
 
-	public void setReceiver(int receiver) {
+	public void setReceiver(Integer receiver) {
 		Receiver = receiver;
 	}
 
@@ -2791,32 +2791,32 @@ public class Document implements Serializable {
 	}
 
 
-	public int getRelatedEntry() {
+	public Integer getRelatedEntry() {
 		return RelatedEntry;
 	}
 
 
-	public void setRelatedEntry(int relatedEntry) {
+	public void setRelatedEntry(Integer relatedEntry) {
 		RelatedEntry = relatedEntry;
 	}
 
 
-	public int getRelatedType() {
+	public Integer getRelatedType() {
 		return RelatedType;
 	}
 
 
-	public void setRelatedType(int relatedType) {
+	public void setRelatedType(Integer relatedType) {
 		RelatedType = relatedType;
 	}
 
 
-	public int getReleaser() {
+	public Integer getReleaser() {
 		return Releaser;
 	}
 
 
-	public void setReleaser(int releaser) {
+	public void setReleaser(Integer releaser) {
 		Releaser = releaser;
 	}
 
@@ -2861,12 +2861,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getReqType() {
+	public Integer getReqType() {
 		return ReqType;
 	}
 
 
-	public void setReqType(int reqType) {
+	public void setReqType(Integer reqType) {
 		ReqType = reqType;
 	}
 
@@ -2881,22 +2881,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getRequesterBranch() {
+	public Integer getRequesterBranch() {
 		return RequesterBranch;
 	}
 
 
-	public void setRequesterBranch(int requesterBranch) {
+	public void setRequesterBranch(Integer requesterBranch) {
 		RequesterBranch = requesterBranch;
 	}
 
 
-	public int getRequesterDepartment() {
+	public Integer getRequesterDepartment() {
 		return RequesterDepartment;
 	}
 
 
-	public void setRequesterDepartment(int requesterDepartment) {
+	public void setRequesterDepartment(Integer requesterDepartment) {
 		RequesterDepartment = requesterDepartment;
 	}
 
@@ -3001,52 +3001,52 @@ public class Document implements Serializable {
 	}
 
 
-	public double getRoundingDiffAmount() {
+	public Double getRoundingDiffAmount() {
 		return RoundingDiffAmount;
 	}
 
 
-	public void setRoundingDiffAmount(double roundingDiffAmount) {
+	public void setRoundingDiffAmount(Double roundingDiffAmount) {
 		RoundingDiffAmount = roundingDiffAmount;
 	}
 
 
-	public double getRoundingDiffAmountFC() {
+	public Double getRoundingDiffAmountFC() {
 		return RoundingDiffAmountFC;
 	}
 
 
-	public void setRoundingDiffAmountFC(double roundingDiffAmountFC) {
+	public void setRoundingDiffAmountFC(Double roundingDiffAmountFC) {
 		RoundingDiffAmountFC = roundingDiffAmountFC;
 	}
 
 
-	public double getRoundingDiffAmountSC() {
+	public Double getRoundingDiffAmountSC() {
 		return RoundingDiffAmountSC;
 	}
 
 
-	public void setRoundingDiffAmountSC(double roundingDiffAmountSC) {
+	public void setRoundingDiffAmountSC(Double roundingDiffAmountSC) {
 		RoundingDiffAmountSC = roundingDiffAmountSC;
 	}
 
 
-	public int getSalesPersonCode() {
+	public Integer getSalesPersonCode() {
 		return SalesPersonCode;
 	}
 
 
-	public void setSalesPersonCode(int salesPersonCode) {
+	public void setSalesPersonCode(Integer salesPersonCode) {
 		SalesPersonCode = salesPersonCode;
 	}
 
 
-	public int getSegment() {
+	public Integer getSegment() {
 		return Segment;
 	}
 
 
-	public void setSegment(int segment) {
+	public void setSegment(Integer segment) {
 		Segment = segment;
 	}
 
@@ -3061,12 +3061,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getSequenceCode() {
+	public Integer getSequenceCode() {
 		return SequenceCode;
 	}
 
 
-	public void setSequenceCode(int sequenceCode) {
+	public void setSequenceCode(Integer sequenceCode) {
 		SequenceCode = sequenceCode;
 	}
 
@@ -3081,22 +3081,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getSequenceSerial() {
+	public Integer getSequenceSerial() {
 		return SequenceSerial;
 	}
 
 
-	public void setSequenceSerial(int sequenceSerial) {
+	public void setSequenceSerial(Integer sequenceSerial) {
 		SequenceSerial = sequenceSerial;
 	}
 
 
-	public int getSeries() {
+	public Integer getSeries() {
 		return Series;
 	}
 
 
-	public void setSeries(int series) {
+	public void setSeries(Integer series) {
 		Series = series;
 	}
 
@@ -3111,12 +3111,12 @@ public class Document implements Serializable {
 	}
 
 
-	public double getServiceGrossProfitPercent() {
+	public Double getServiceGrossProfitPercent() {
 		return ServiceGrossProfitPercent;
 	}
 
 
-	public void setServiceGrossProfitPercent(double serviceGrossProfitPercent) {
+	public void setServiceGrossProfitPercent(Double serviceGrossProfitPercent) {
 		ServiceGrossProfitPercent = serviceGrossProfitPercent;
 	}
 
@@ -3301,62 +3301,62 @@ public class Document implements Serializable {
 	}
 
 
-	public double getTotalDiscount() {
+	public Double getTotalDiscount() {
 		return TotalDiscount;
 	}
 
 
-	public void setTotalDiscount(double totalDiscount) {
+	public void setTotalDiscount(Double totalDiscount) {
 		TotalDiscount = totalDiscount;
 	}
 
 
-	public double getTotalDiscountFC() {
+	public Double getTotalDiscountFC() {
 		return TotalDiscountFC;
 	}
 
 
-	public void setTotalDiscountFC(double totalDiscountFC) {
+	public void setTotalDiscountFC(Double totalDiscountFC) {
 		TotalDiscountFC = totalDiscountFC;
 	}
 
 
-	public double getTotalDiscountSC() {
+	public Double getTotalDiscountSC() {
 		return TotalDiscountSC;
 	}
 
 
-	public void setTotalDiscountSC(double totalDiscountSC) {
+	public void setTotalDiscountSC(Double totalDiscountSC) {
 		TotalDiscountSC = totalDiscountSC;
 	}
 
 
-	public double getTotalEqualizationTax() {
+	public Double getTotalEqualizationTax() {
 		return TotalEqualizationTax;
 	}
 
 
-	public void setTotalEqualizationTax(double totalEqualizationTax) {
+	public void setTotalEqualizationTax(Double totalEqualizationTax) {
 		TotalEqualizationTax = totalEqualizationTax;
 	}
 
 
-	public double getTotalEqualizationTaxFC() {
+	public Double getTotalEqualizationTaxFC() {
 		return TotalEqualizationTaxFC;
 	}
 
 
-	public void setTotalEqualizationTaxFC(double totalEqualizationTaxFC) {
+	public void setTotalEqualizationTaxFC(Double totalEqualizationTaxFC) {
 		TotalEqualizationTaxFC = totalEqualizationTaxFC;
 	}
 
 
-	public double getTotalEqualizationTaxSC() {
+	public Double getTotalEqualizationTaxSC() {
 		return TotalEqualizationTaxSC;
 	}
 
 
-	public void setTotalEqualizationTaxSC(double totalEqualizationTaxSC) {
+	public void setTotalEqualizationTaxSC(Double totalEqualizationTaxSC) {
 		TotalEqualizationTaxSC = totalEqualizationTaxSC;
 	}
 
@@ -3371,22 +3371,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getTransNum() {
+	public Integer getTransNum() {
 		return TransNum;
 	}
 
 
-	public void setTransNum(int transNum) {
+	public void setTransNum(Integer transNum) {
 		TransNum = transNum;
 	}
 
 
-	public int getTransportationCode() {
+	public Integer getTransportationCode() {
 		return TransportationCode;
 	}
 
 
-	public void setTransportationCode(int transportationCode) {
+	public void setTransportationCode(Integer transportationCode) {
 		TransportationCode = transportationCode;
 	}
 
@@ -3411,13 +3411,13 @@ public class Document implements Serializable {
 	}
 
 
-	public String getU_AplInt() {
-		return U_AplInt;
+	public String getU_AplInteger() {
+		return U_AplInteger;
 	}
 
 
-	public void setU_AplInt(String u_AplInt) {
-		U_AplInt = u_AplInt;
+	public void setU_AplInteger(String u_AplInteger) {
+		U_AplInteger = u_AplInteger;
 	}
 
 
@@ -3501,12 +3501,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_Contrato() {
+	public Integer getU_Contrato() {
 		return U_Contrato;
 	}
 
 
-	public void setU_Contrato(int u_Contrato) {
+	public void setU_Contrato(Integer u_Contrato) {
 		U_Contrato = u_Contrato;
 	}
 
@@ -3591,22 +3591,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_GTI_ID() {
+	public Integer getU_GTI_ID() {
 		return U_GTI_ID;
 	}
 
 
-	public void setU_GTI_ID(int u_GTI_ID) {
+	public void setU_GTI_ID(Integer u_GTI_ID) {
 		U_GTI_ID = u_GTI_ID;
 	}
 
 
-	public int getU_GTI_MOTIVOS() {
+	public Integer getU_GTI_MOTIVOS() {
 		return U_GTI_MOTIVOS;
 	}
 
 
-	public void setU_GTI_MOTIVOS(int u_GTI_MOTIVOS) {
+	public void setU_GTI_MOTIVOS(Integer u_GTI_MOTIVOS) {
 		U_GTI_MOTIVOS = u_GTI_MOTIVOS;
 	}
 
@@ -3781,22 +3781,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_RefInt() {
-		return U_RefInt;
+	public Integer getU_RefInteger() {
+		return U_RefInteger;
 	}
 
 
-	public void setU_RefInt(int u_RefInt) {
-		U_RefInt = u_RefInt;
+	public void setU_RefInteger(Integer u_RefInteger) {
+		U_RefInteger = u_RefInteger;
 	}
 
 
-	public int getU_SCG_Com() {
+	public Integer getU_SCG_Com() {
 		return U_SCG_Com;
 	}
 
 
-	public void setU_SCG_Com(int u_SCG_Com) {
+	public void setU_SCG_Com(Integer u_SCG_Com) {
 		U_SCG_Com = u_SCG_Com;
 	}
 
@@ -3811,12 +3811,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_SCGRMS_Caja() {
+	public Integer getU_SCGRMS_Caja() {
 		return U_SCGRMS_Caja;
 	}
 
 
-	public void setU_SCGRMS_Caja(int u_SCGRMS_Caja) {
+	public void setU_SCGRMS_Caja(Integer u_SCGRMS_Caja) {
 		U_SCGRMS_Caja = u_SCGRMS_Caja;
 	}
 
@@ -3841,22 +3841,22 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_SCGRMS_IdDoc() {
+	public Integer getU_SCGRMS_IdDoc() {
 		return U_SCGRMS_IdDoc;
 	}
 
 
-	public void setU_SCGRMS_IdDoc(int u_SCGRMS_IdDoc) {
+	public void setU_SCGRMS_IdDoc(Integer u_SCGRMS_IdDoc) {
 		U_SCGRMS_IdDoc = u_SCGRMS_IdDoc;
 	}
 
 
-	public int getU_SCGRMS_Jornada() {
+	public Integer getU_SCGRMS_Jornada() {
 		return U_SCGRMS_Jornada;
 	}
 
 
-	public void setU_SCGRMS_Jornada(int u_SCGRMS_Jornada) {
+	public void setU_SCGRMS_Jornada(Integer u_SCGRMS_Jornada) {
 		U_SCGRMS_Jornada = u_SCGRMS_Jornada;
 	}
 
@@ -3871,12 +3871,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_SCGRMS_NumDoc() {
+	public Integer getU_SCGRMS_NumDoc() {
 		return U_SCGRMS_NumDoc;
 	}
 
 
-	public void setU_SCGRMS_NumDoc(int u_SCGRMS_NumDoc) {
+	public void setU_SCGRMS_NumDoc(Integer u_SCGRMS_NumDoc) {
 		U_SCGRMS_NumDoc = u_SCGRMS_NumDoc;
 	}
 
@@ -4061,12 +4061,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_Suscriptor() {
+	public Integer getU_Suscriptor() {
 		return U_Suscriptor;
 	}
 
 
-	public void setU_Suscriptor(int u_Suscriptor) {
+	public void setU_Suscriptor(Integer u_Suscriptor) {
 		U_Suscriptor = u_Suscriptor;
 	}
 
@@ -4081,12 +4081,12 @@ public class Document implements Serializable {
 	}
 
 
-	public int getU_TipoExon() {
+	public Integer getU_TipoExon() {
 		return U_TipoExon;
 	}
 
 
-	public void setU_TipoExon(int u_TipoExon) {
+	public void setU_TipoExon(Integer u_TipoExon) {
 		U_TipoExon = u_TipoExon;
 	}
 
@@ -4251,12 +4251,12 @@ public class Document implements Serializable {
 	}
 
 
-	public double getVatPercent() {
+	public Double getVatPercent() {
 		return VatPercent;
 	}
 
 
-	public void setVatPercent(double vatPercent) {
+	public void setVatPercent(Double vatPercent) {
 		VatPercent = vatPercent;
 	}
 
@@ -4271,32 +4271,32 @@ public class Document implements Serializable {
 	}
 
 
-	public double getVatSum() {
+	public Double getVatSum() {
 		return VatSum;
 	}
 
 
-	public void setVatSum(double vatSum) {
+	public void setVatSum(Double vatSum) {
 		VatSum = vatSum;
 	}
 
 
-	public double getVatSumFc() {
+	public Double getVatSumFc() {
 		return VatSumFc;
 	}
 
 
-	public void setVatSumFc(double vatSumFc) {
+	public void setVatSumFc(Double vatSumFc) {
 		VatSumFc = vatSumFc;
 	}
 
 
-	public double getVatSumSys() {
+	public Double getVatSumSys() {
 		return VatSumSys;
 	}
 
 
-	public void setVatSumSys(double vatSumSys) {
+	public void setVatSumSys(Double vatSumSys) {
 		VatSumSys = vatSumSys;
 	}
 
@@ -4321,122 +4321,122 @@ public class Document implements Serializable {
 	}
 
 
-	public double getWTAmount() {
+	public Double getWTAmount() {
 		return WTAmount;
 	}
 
 
-	public void setWTAmount(double wTAmount) {
+	public void setWTAmount(Double wTAmount) {
 		WTAmount = wTAmount;
 	}
 
 
-	public double getWTAmountFC() {
+	public Double getWTAmountFC() {
 		return WTAmountFC;
 	}
 
 
-	public void setWTAmountFC(double wTAmountFC) {
+	public void setWTAmountFC(Double wTAmountFC) {
 		WTAmountFC = wTAmountFC;
 	}
 
 
-	public double getWTAmountSC() {
+	public Double getWTAmountSC() {
 		return WTAmountSC;
 	}
 
 
-	public void setWTAmountSC(double wTAmountSC) {
+	public void setWTAmountSC(Double wTAmountSC) {
 		WTAmountSC = wTAmountSC;
 	}
 
 
-	public double getWTApplied() {
+	public Double getWTApplied() {
 		return WTApplied;
 	}
 
 
-	public void setWTApplied(double wTApplied) {
+	public void setWTApplied(Double wTApplied) {
 		WTApplied = wTApplied;
 	}
 
 
-	public double getWTAppliedFC() {
+	public Double getWTAppliedFC() {
 		return WTAppliedFC;
 	}
 
 
-	public void setWTAppliedFC(double wTAppliedFC) {
+	public void setWTAppliedFC(Double wTAppliedFC) {
 		WTAppliedFC = wTAppliedFC;
 	}
 
 
-	public double getWTAppliedSC() {
+	public Double getWTAppliedSC() {
 		return WTAppliedSC;
 	}
 
 
-	public void setWTAppliedSC(double wTAppliedSC) {
+	public void setWTAppliedSC(Double wTAppliedSC) {
 		WTAppliedSC = wTAppliedSC;
 	}
 
 
-	public double getWTExemptedAmount() {
+	public Double getWTExemptedAmount() {
 		return WTExemptedAmount;
 	}
 
 
-	public void setWTExemptedAmount(double wTExemptedAmount) {
+	public void setWTExemptedAmount(Double wTExemptedAmount) {
 		WTExemptedAmount = wTExemptedAmount;
 	}
 
 
-	public double getWTExemptedAmountFC() {
+	public Double getWTExemptedAmountFC() {
 		return WTExemptedAmountFC;
 	}
 
 
-	public void setWTExemptedAmountFC(double wTExemptedAmountFC) {
+	public void setWTExemptedAmountFC(Double wTExemptedAmountFC) {
 		WTExemptedAmountFC = wTExemptedAmountFC;
 	}
 
 
-	public double getWTExemptedAmountSC() {
+	public Double getWTExemptedAmountSC() {
 		return WTExemptedAmountSC;
 	}
 
 
-	public void setWTExemptedAmountSC(double wTExemptedAmountSC) {
+	public void setWTExemptedAmountSC(Double wTExemptedAmountSC) {
 		WTExemptedAmountSC = wTExemptedAmountSC;
 	}
 
 
-	public double getWTNonSubjectAmount() {
+	public Double getWTNonSubjectAmount() {
 		return WTNonSubjectAmount;
 	}
 
 
-	public void setWTNonSubjectAmount(double wTNonSubjectAmount) {
+	public void setWTNonSubjectAmount(Double wTNonSubjectAmount) {
 		WTNonSubjectAmount = wTNonSubjectAmount;
 	}
 
 
-	public double getWTNonSubjectAmountFC() {
+	public Double getWTNonSubjectAmountFC() {
 		return WTNonSubjectAmountFC;
 	}
 
 
-	public void setWTNonSubjectAmountFC(double wTNonSubjectAmountFC) {
+	public void setWTNonSubjectAmountFC(Double wTNonSubjectAmountFC) {
 		WTNonSubjectAmountFC = wTNonSubjectAmountFC;
 	}
 
 
-	public double getWTNonSubjectAmountSC() {
+	public Double getWTNonSubjectAmountSC() {
 		return WTNonSubjectAmountSC;
 	}
 
 
-	public void setWTNonSubjectAmountSC(double wTNonSubjectAmountSC) {
+	public void setWTNonSubjectAmountSC(Double wTNonSubjectAmountSC) {
 		WTNonSubjectAmountSC = wTNonSubjectAmountSC;
 	}
 
@@ -4444,7 +4444,7 @@ public class Document implements Serializable {
 
 
 	public String toJson(){
-		Gson gson = new GsonBuilder().serializeNulls().create();
+		Gson gson = new GsonBuilder().create();
 		return gson.toJson(this);
 	}
 
@@ -4496,8 +4496,8 @@ public class Document implements Serializable {
 				+ GroupHandWritten + ", GroupNumber=" + GroupNumber + ", GroupSeries=" + GroupSeries
 				+ ", GSTTransactionType=" + GSTTransactionType + ", GTSChecker=" + GTSChecker + ", GTSPayee=" + GTSPayee
 				+ ", HandWritten=" + HandWritten + ", ImportFileNum=" + ImportFileNum + ", Indicator=" + Indicator
-				+ ", InsuranceOperation347=" + InsuranceOperation347 + ", InterimType=" + InterimType
-				+ ", InternalCorrectedDocNum=" + InternalCorrectedDocNum + ", IsAlteration=" + IsAlteration
+				+ ", InsuranceOperation347=" + InsuranceOperation347 + ", IntegererimType=" + IntegererimType
+				+ ", IntegerernalCorrectedDocNum=" + IntegerernalCorrectedDocNum + ", IsAlteration=" + IsAlteration
 				+ ", IsPayToBank=" + IsPayToBank + ", IssuingReason=" + IssuingReason + ", JournalMemo=" + JournalMemo
 				+ ", LanguageCode=" + LanguageCode + ", Letter=" + Letter + ", ManualNumber=" + ManualNumber
 				+ ", MaximumCashDiscount=" + MaximumCashDiscount + ", NetProcedure=" + NetProcedure
@@ -4512,11 +4512,11 @@ public class Document implements Serializable {
 				+ ", PayToBankAccountNo=" + PayToBankAccountNo + ", PayToBankBranch=" + PayToBankBranch
 				+ ", PayToBankCode=" + PayToBankCode + ", PayToBankCountry=" + PayToBankCountry + ", PayToCode="
 				+ PayToCode + ", PeriodIndicator=" + PeriodIndicator + ", Pick=" + Pick + ", PickRemark=" + PickRemark
-				+ ", PickStatus=" + PickStatus + ", PointOfIssueCode=" + PointOfIssueCode + ", POS_CashRegister="
+				+ ", PickStatus=" + PickStatus + ", PoIntegerOfIssueCode=" + PoIntegerOfIssueCode + ", POS_CashRegister="
 				+ POS_CashRegister + ", POSCashierNumber=" + POSCashierNumber + ", POSDailySummaryNo="
 				+ POSDailySummaryNo + ", POSEquipmentNumber=" + POSEquipmentNumber + ", POSManufacturerSerialNumber="
-				+ POSManufacturerSerialNumber + ", POSReceiptNo=" + POSReceiptNo + ", Printed=" + Printed
-				+ ", PrintSEPADirect=" + PrintSEPADirect + ", PrivateKeyVersion=" + PrivateKeyVersion + ", Project="
+				+ POSManufacturerSerialNumber + ", POSReceiptNo=" + POSReceiptNo + ", PrIntegered=" + PrIntegered
+				+ ", PrIntegerSEPADirect=" + PrIntegerSEPADirect + ", PrivateKeyVersion=" + PrivateKeyVersion + ", Project="
 				+ Project + ", Receiver=" + Receiver + ", Reference1=" + Reference1 + ", Reference2=" + Reference2
 				+ ", RelatedEntry=" + RelatedEntry + ", RelatedType=" + RelatedType + ", Releaser=" + Releaser
 				+ ", RelevantToGTS=" + RelevantToGTS + ", ReopenManuallyClosedOrCanceledDocument="
@@ -4544,7 +4544,7 @@ public class Document implements Serializable {
 				+ ", TotalEqualizationTax=" + TotalEqualizationTax + ", TotalEqualizationTaxFC="
 				+ TotalEqualizationTaxFC + ", TotalEqualizationTaxSC=" + TotalEqualizationTaxSC + ", TrackingNumber="
 				+ TrackingNumber + ", TransNum=" + TransNum + ", TransportationCode=" + TransportationCode
-				+ ", U_AgeCob=" + U_AgeCob + ", U_Agencia=" + U_Agencia + ", U_AplInt=" + U_AplInt + ", U_BDOC="
+				+ ", U_AgeCob=" + U_AgeCob + ", U_Agencia=" + U_Agencia + ", U_AplInteger=" + U_AplInteger + ", U_BDOC="
 				+ U_BDOC + ", U_caja=" + U_caja + ", U_Canal=" + U_Canal + ", U_CanCobro=" + U_CanCobro
 				+ ", U_CardName=" + U_CardName + ", U_Cobrador=" + U_Cobrador + ", U_Condic=" + U_Condic
 				+ ", U_Consignacion=" + U_Consignacion + ", U_Contrato=" + U_Contrato + ", U_DocEntrega=" + U_DocEntrega
@@ -4555,7 +4555,7 @@ public class Document implements Serializable {
 				+ U_LugarEntrega + ", U_MedioPago=" + U_MedioPago + ", U_NAR=" + U_NAR + ", U_NatDesc=" + U_NatDesc
 				+ ", U_NCA=" + U_NCA + ", U_NNE=" + U_NNE + ", U_NPR=" + U_NPR + ", U_NSP=" + U_NSP + ", U_NumElec="
 				+ U_NumElec + ", U_NumPedido=" + U_NumPedido + ", U_OrdenCompra=" + U_OrdenCompra + ", U_ORIPRE="
-				+ U_ORIPRE + ", U_PO=" + U_PO + ", U_REFDOC=" + U_REFDOC + ", U_RefInt=" + U_RefInt + ", U_SCG_Com="
+				+ U_ORIPRE + ", U_PO=" + U_PO + ", U_REFDOC=" + U_REFDOC + ", U_RefInteger=" + U_RefInteger + ", U_SCG_Com="
 				+ U_SCG_Com + ", U_SCGCOM_CalCom=" + U_SCGCOM_CalCom + ", U_SCGRMS_Caja=" + U_SCGRMS_Caja
 				+ ", U_SCGRMS_FechaUpdt=" + U_SCGRMS_FechaUpdt + ", U_SCGRMS_Filler2=" + U_SCGRMS_Filler2
 				+ ", U_SCGRMS_IdDoc=" + U_SCGRMS_IdDoc + ", U_SCGRMS_Jornada=" + U_SCGRMS_Jornada

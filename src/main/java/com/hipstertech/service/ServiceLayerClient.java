@@ -108,10 +108,11 @@ public class ServiceLayerClient {
 	public Document createDocument(Document document, String resource) {
 		try {
 
+			String objectToCreate =document.toJson();
 			OkHttpClient client = new OkHttpClient().newBuilder()
 					.build();
 			MediaType mediaType = MediaType.parse("application/json");
-			RequestBody body = RequestBody.create(mediaType,document.toJson());
+			RequestBody body = RequestBody.create(mediaType,objectToCreate);
 			Request request = new Request.Builder()
 					.url( url + "/" + resource)
 					.method("POST", body)
@@ -119,7 +120,7 @@ public class ServiceLayerClient {
 					.addHeader("Cookie", getCookie() )
 					.build();
 			ResponseBody responseBody = client.newCall(request).execute().body();
-			Document entity = getDocumentFromResponseBody(responseBody.string());
+			Document entity = getDocumentFromResponseBodyPost(responseBody.string());
 			return entity;
 		}catch (Exception e) {
 			log.error(e.getMessage());
@@ -165,6 +166,13 @@ public class ServiceLayerClient {
 		document = new Gson().fromJson(convertedObject.getAsJsonArray("value").get(0).toString(),Document.class);
 		return document;
 	}
+	
+	private Document getDocumentFromResponseBodyPost(String responseBody) {
+		Document document = null;
+		JsonObject convertedObject = new Gson().fromJson(responseBody, JsonObject.class);
+		document = new Gson().fromJson(convertedObject.toString(),Document.class);
+		return document;
+	}
 
 	private List<DocumentLines> getLineWithValues(List<DocumentLines>  linesSAP) {
 		
@@ -192,6 +200,7 @@ public class ServiceLayerClient {
 			line.setSalesPersonCode(lineSAP.getSalesPersonCode());
 			line.setTaxCode(lineSAP.getTaxCode());
 			line.setUnitPrice(lineSAP.getUnitPrice());
+			//line.setActualBaseLine(lineSAP.getActualBaseLine());
 			resultLines.add(line);
 		});
 		
@@ -217,7 +226,12 @@ public class ServiceLayerClient {
 		invoiceResult.setU_NNE(invoiceSAP.getU_NNE());
 		invoiceResult.setU_NPR(invoiceSAP.getU_NPR());
 		invoiceResult.setU_NSP(invoiceSAP.getU_NSP());
+		invoiceResult.setDocObjectCode(invoiceSAP.getDocObjectCode());
+		invoiceResult.setIssuingReason(invoiceSAP.getIssuingReason());
+		invoiceResult.setRelatedType(invoiceSAP.getRelatedType());
 		invoiceResult.setSeries(serie);
+		invoiceResult.setU_GTI_MOTIVOS(invoiceSAP.getU_GTI_MOTIVOS());
+		invoiceResult.setU_TipoExon(invoiceSAP.getU_TipoExon());
 		return invoiceResult;
 	}
 

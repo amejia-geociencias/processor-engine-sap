@@ -9,14 +9,10 @@ import org.mapstruct.*;
 /**
  * Mapper for the entity {@link MarketingDocuments} and its DTO {@link MarketingDocumentsDTO}.
  */
-@Mapper(componentModel = "spring", uses = {JobMapper.class})
+@Mapper(componentModel = "spring", uses = {})
 public interface MarketingDocumentsMapper extends EntityMapper<MarketingDocumentsDTO, MarketingDocuments> {
 
-    @Mapping(source = "job.id", target = "jobId")
-    MarketingDocumentsDTO toDto(MarketingDocuments marketingDocuments);
 
-    @Mapping(source = "jobId", target = "job")
-    MarketingDocuments toEntity(MarketingDocumentsDTO marketingDocumentsDTO);
 
     default MarketingDocuments fromId(Long id) {
         if (id == null) {

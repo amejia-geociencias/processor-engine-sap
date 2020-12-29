@@ -1,5 +1,6 @@
 package com.hipstertech.service;
 
+import com.hipstertech.domain.enumeration.Status;
 import com.hipstertech.service.dto.MarketingDocumentsDTO;
 
 import java.util.List;
@@ -24,13 +25,6 @@ public interface MarketingDocumentsService {
      * @return the list of entities.
      */
     List<MarketingDocumentsDTO> findAll();
-    
-    /**
-     * Get all the marketingDocuments by job id.
-     *
-     * @return the list of entities.
-     */
-    List<MarketingDocumentsDTO> findByJobAndStatus(Long idJob, String Status);
 
 
     /**
@@ -47,4 +41,6 @@ public interface MarketingDocumentsService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+
+	List<MarketingDocumentsDTO> findByJobAndStatus(int idJob, Status status);
 }

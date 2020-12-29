@@ -13,7 +13,7 @@ public class DocumentLines implements Serializable {
 	public String AccountCode ;
 
 
-	public int ActualBaseEntry ;
+	public Integer ActualBaseEntry ;
 
 
 	public String ActualBaseLine;
@@ -25,19 +25,19 @@ public class DocumentLines implements Serializable {
 	public String Address ;
 
 
-	public int AgreementNo ;
+	public Integer AgreementNo ;
 
 
-	public int AgreementRowNumber ;
+	public Integer AgreementRowNumber ;
 
 
-	public double AppliedTax ;
+	public Double AppliedTax ;
 
 
-	public double AppliedTaxFC ;
+	public Double AppliedTaxFC ;
 
 
-	public double AppliedTaxSC ;
+	public Double AppliedTaxSC ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -49,16 +49,16 @@ public class DocumentLines implements Serializable {
 	public String BarCode ;
 
 
-	public int BaseEntry ;
+	public Integer BaseEntry ;
 
 
 	public String BaseLine;
 
 
-	public double BaseOpenQuantity ;
+	public Double BaseOpenQuantity ;
 
 
-	public int BaseType ;
+	public Integer BaseType ;
 
 
 	public List<BatchNumberObject> BatchNumbers ;
@@ -94,7 +94,7 @@ public class DocumentLines implements Serializable {
 	public String COGSCostingCode5 ;
 
 
-	public double CommisionPercent ;
+	public Double CommisionPercent ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -115,10 +115,10 @@ public class DocumentLines implements Serializable {
 	public String CorrectionInvoiceItem ;
 
 
-	public double CorrInvAmountToDiffAcct ;
+	public Double CorrInvAmountToDiffAcct ;
 
 
-	public double CorrInvAmountToStock ;
+	public Double CorrInvAmountToStock ;
 
 
 	public String CostingCode ;
@@ -157,7 +157,7 @@ public class DocumentLines implements Serializable {
 	public String Currency ;
 
 
-	public double DefectAndBreakup ;
+	public Double DefectAndBreakup ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -166,7 +166,7 @@ public class DocumentLines implements Serializable {
 	public String DeferredTax ;
 
 
-	public double DiscountPercent ;
+	public Double DiscountPercent ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -175,7 +175,7 @@ public class DocumentLines implements Serializable {
 	public String DistributeExpense ;
 
 
-	public int DocEntry ;
+	public Integer DocEntry ;
 
 
 	public List<DocumentLineAdditionalExpense> DocumentLineAdditionalExpenses ;
@@ -190,25 +190,25 @@ public class DocumentLines implements Serializable {
 	public String EnableReturnCost ;
 
 
-	public double EqualizationTaxPercent ;
+	public Double EqualizationTaxPercent ;
 
 
-	public double ExciseAmount ;
+	public Double ExciseAmount ;
 
 
 	public String ExLineNo ;
 
 
-	public double Factor1 ;
+	public Double Factor1 ;
 
 
-	public double Factor2 ;
+	public Double Factor2 ;
 
 
-	public double Factor3 ;
+	public Double Factor3 ;
 
 
-	public double Factor4 ;
+	public Double Factor4 ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -220,31 +220,31 @@ public class DocumentLines implements Serializable {
 	public String FreeText ;
 
 
-	public int GrossBase ;
+	public Integer GrossBase ;
 
 
-	public double GrossBuyPrice ;
+	public Double GrossBuyPrice ;
 
 
-	public double GrossProfitTotalBasePrice ;
+	public Double GrossProfitTotalBasePrice ;
 
 
-	public double Height1 ;
+	public Double Height1 ;
 
 
-	public double Height2 ;
+	public Double Height2 ;
 
 
-	public int Height2Unit ;
+	public Integer Height2Unit ;
 
 
-	public int Hight1Unit ;
+	public Integer Hight1Unit ;
 
 
-	public int Incoterms ;
+	public Integer Incoterms ;
 
 
-	public double InventoryQuantity ;
+	public Double InventoryQuantity ;
 
 
 	public String ItemCode ;
@@ -262,31 +262,31 @@ public class DocumentLines implements Serializable {
 	public String ItemType ;
 
 
-	public double LastBuyDistributeSum ;
+	public Double LastBuyDistributeSum ;
 
 
-	public double LastBuyDistributeSumFc ;
+	public Double LastBuyDistributeSumFc ;
 
 
-	public double LastBuyDistributeSumSc ;
+	public Double LastBuyDistributeSumSc ;
 
 
-	public double LastBuyInmPrice ;
+	public Double LastBuyInmPrice ;
 
 
-	public double Lengh1 ;
+	public Double Lengh1 ;
 
 
-	public int Lengh1Unit ;
+	public Integer Lengh1Unit ;
 
 
-	public double Lengh2 ;
+	public Double Lengh2 ;
 
 
-	public int Lengh2Unit ;
+	public Integer Lengh2Unit ;
 
 
-	public int LineNum ;
+	public Integer LineNum ;
 
 	/// <summary>
 	/// Enumeration: BoStatus. 
@@ -298,7 +298,7 @@ public class DocumentLines implements Serializable {
 	public List<LineTaxJurisdiction> LineTaxJurisdictions ;
 
 
-	public double LineTotal ;
+	public Double LineTotal ;
 
 	/// <summary>
 	/// Enumeration: BoDocLineType. 
@@ -310,37 +310,37 @@ public class DocumentLines implements Serializable {
 	public String LineVendor ;
 
 
-	public int LocationCode ;
+	public Integer LocationCode ;
 
 
 	public String MeasureUnit ;
 
 
-	public double NetTaxAmount ;
+	public Double NetTaxAmount ;
 
 
-	public double NetTaxAmountFC ;
+	public Double NetTaxAmountFC ;
 
 
-	public double NetTaxAmountSC ;
+	public Double NetTaxAmountSC ;
 
 
-	public double OpenAmount ;
+	public Double OpenAmount ;
 
 
-	public double OpenAmountFC ;
+	public Double OpenAmountFC ;
 
 
-	public double OpenAmountSC ;
+	public Double OpenAmountSC ;
 
 
 	public String OriginalItem ;
 
 
-	public double PackageQuantity ;
+	public Double PackageQuantity ;
 
 
-	public int ParentLineNum ;
+	public Integer ParentLineNum ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -349,10 +349,10 @@ public class DocumentLines implements Serializable {
 	public String PartialRetirement ;
 
 
-	public int PickListIdNumber ;
+	public Integer PickListIdNumber ;
 
 
-	public double PickQuantity ;
+	public Double PickQuantity ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -370,55 +370,55 @@ public class DocumentLines implements Serializable {
 	public String POTargetEntry ;
 
 
-	public int POTargetNum ;
+	public Integer POTargetNum ;
 
 
-	public int POTargetRowNum ;
+	public Integer POTargetRowNum ;
 
 
-	public double Price ;
+	public Double Price ;
 
 
-	public double PriceAfterVAT ;
+	public Double PriceAfterVAT ;
 
 
 	public String ProjectCode ;
 
 
-	public double Quantity ;
+	public Double Quantity ;
 
 
-	public double Rate ;
+	public Double Rate ;
 
 
-	public double RemainingOpenInventoryQuantity ;
+	public Double RemainingOpenInventoryQuantity ;
 
 
-	public double RemainingOpenQuantity ;
+	public Double RemainingOpenQuantity ;
 
 
 	public Date RequiredDate ;
 
 
-	public double RequiredQuantity ;
+	public Double RequiredQuantity ;
 
 
-	public double RetirementAPC ;
+	public Double RetirementAPC ;
 
 
-	public double RetirementQuantity ;
+	public Double RetirementQuantity ;
 
 
-	public double ReturnCost ;
+	public Double ReturnCost ;
 
 
-	public double RowTotalFC ;
+	public Double RowTotalFC ;
 
 
-	public double RowTotalSC ;
+	public Double RowTotalSC ;
 
 
-	public int SalesPersonCode ;
+	public Integer SalesPersonCode ;
 
 
 	public String SerialNum ;
@@ -430,7 +430,7 @@ public class DocumentLines implements Serializable {
 	public Date ShipDate ;
 
 
-	public int ShippingMethod ;
+	public Integer ShippingMethod ;
 
 
 	public String ShipToCode ;
@@ -439,37 +439,37 @@ public class DocumentLines implements Serializable {
 	public String ShipToDescription ;
 
 
-	public double Shortages ;
+	public Double Shortages ;
 
 
-	public double StockDistributesum ;
+	public Double StockDistributesum ;
 
 
-	public double StockDistributesumForeign ;
+	public Double StockDistributesumForeign ;
 
 
-	public double StockDistributesumSystem ;
+	public Double StockDistributesumSystem ;
 
 
-	public double StockInmPrice ;
+	public Double StockInmPrice ;
 
 
 	public String SupplierCatNum ;
 
 
-	public double Surpluses ;
+	public Double Surpluses ;
 
 
 	public String SWW ;
 
 
-	public double TaxBeforeDPM ;
+	public Double TaxBeforeDPM ;
 
 
-	public double TaxBeforeDPMFC ;
+	public Double TaxBeforeDPMFC ;
 
 
-	public double TaxBeforeDPMSC ;
+	public Double TaxBeforeDPMSC ;
 
 
 	public String TaxCode ;
@@ -487,13 +487,13 @@ public class DocumentLines implements Serializable {
 	public String TaxOnly ;
 
 
-	public double TaxPercentagePerRow ;
+	public Double TaxPercentagePerRow ;
 
 
-	public double TaxPerUnit ;
+	public Double TaxPerUnit ;
 
 
-	public double TaxTotal ;
+	public Double TaxTotal ;
 
 	/// <summary>
 	/// Enumeration: BoTaxTypes. 
@@ -511,16 +511,16 @@ public class DocumentLines implements Serializable {
 	public String ThirdParty ;
 
 
-	public double TotalEqualizationTax ;
+	public Double TotalEqualizationTax ;
 
 
-	public double TotalEqualizationTaxFC ;
+	public Double TotalEqualizationTaxFC ;
 
 
-	public double TotalEqualizationTaxSC ;
+	public Double TotalEqualizationTaxSC ;
 
 
-	public double TotalInclTax ;
+	public Double TotalInclTax ;
 
 	/// <summary>
 	/// Enumeration: BoTransactionTypeEnum. 
@@ -529,7 +529,7 @@ public class DocumentLines implements Serializable {
 	public String TransactionType ;
 
 
-	public int TransportMode ;
+	public Integer TransportMode ;
 
 	/// <summary>
 	/// Enumeration: BoItemTreeTypes. 
@@ -550,25 +550,25 @@ public class DocumentLines implements Serializable {
 	public String U_LineId ;
 
 
-	public double U_SCGCOM_GANac ;
+	public Double U_SCGCOM_GANac ;
 
 
 	public String U_ZonaPre ;
 
 
-	public double UnitPrice ;
+	public Double UnitPrice ;
 
 
-	public double UnitsOfMeasurment ;
+	public Double UnitsOfMeasurment ;
 
 
 	public String UoMCode ;
 
 
-	public int UoMEntry ;
+	public Integer UoMEntry ;
 
 
-	public int Usage ;
+	public Integer Usage ;
 
 	/// <summary>
 	/// Enumeration: BoYesNoEnum. 
@@ -583,40 +583,40 @@ public class DocumentLines implements Serializable {
 	public String VendorNum ;
 
 
-	public int VisualOrder ;
+	public Integer VisualOrder ;
 
 
-	public double Volume ;
+	public Double Volume ;
 
 
-	public int VolumeUnit ;
+	public Integer VolumeUnit ;
 
 
 	public String WarehouseCode ;
 
 
-	public double Weight1 ;
+	public Double Weight1 ;
 
 
-	public int Weight1Unit ;
+	public Integer Weight1Unit ;
 
 
-	public double Weight2 ;
+	public Double Weight2 ;
 
 
-	public int Weight2Unit ;
+	public Integer Weight2Unit ;
 
 
-	public double Width1 ;
+	public Double Width1 ;
 
 
-	public int Width1Unit ;
+	public Integer Width1Unit ;
 
 
-	public double Width2 ;
+	public Double Width2 ;
 
 
-	public int Width2Unit ;
+	public Integer Width2Unit ;
 
 
 	public List<WithholdingTaxLine> WithholdingTaxLines ;
@@ -641,11 +641,11 @@ public class DocumentLines implements Serializable {
 		AccountCode = accountCode;
 	}
 
-	public int getActualBaseEntry() {
+	public Integer getActualBaseEntry() {
 		return ActualBaseEntry;
 	}
 
-	public void setActualBaseEntry(int actualBaseEntry) {
+	public void setActualBaseEntry(Integer actualBaseEntry) {
 		ActualBaseEntry = actualBaseEntry;
 	}
 
@@ -673,43 +673,43 @@ public class DocumentLines implements Serializable {
 		Address = address;
 	}
 
-	public int getAgreementNo() {
+	public Integer getAgreementNo() {
 		return AgreementNo;
 	}
 
-	public void setAgreementNo(int agreementNo) {
+	public void setAgreementNo(Integer agreementNo) {
 		AgreementNo = agreementNo;
 	}
 
-	public int getAgreementRowNumber() {
+	public Integer getAgreementRowNumber() {
 		return AgreementRowNumber;
 	}
 
-	public void setAgreementRowNumber(int agreementRowNumber) {
+	public void setAgreementRowNumber(Integer agreementRowNumber) {
 		AgreementRowNumber = agreementRowNumber;
 	}
 
-	public double getAppliedTax() {
+	public Double getAppliedTax() {
 		return AppliedTax;
 	}
 
-	public void setAppliedTax(double appliedTax) {
+	public void setAppliedTax(Double appliedTax) {
 		AppliedTax = appliedTax;
 	}
 
-	public double getAppliedTaxFC() {
+	public Double getAppliedTaxFC() {
 		return AppliedTaxFC;
 	}
 
-	public void setAppliedTaxFC(double appliedTaxFC) {
+	public void setAppliedTaxFC(Double appliedTaxFC) {
 		AppliedTaxFC = appliedTaxFC;
 	}
 
-	public double getAppliedTaxSC() {
+	public Double getAppliedTaxSC() {
 		return AppliedTaxSC;
 	}
 
-	public void setAppliedTaxSC(double appliedTaxSC) {
+	public void setAppliedTaxSC(Double appliedTaxSC) {
 		AppliedTaxSC = appliedTaxSC;
 	}
 
@@ -729,11 +729,11 @@ public class DocumentLines implements Serializable {
 		BarCode = barCode;
 	}
 
-	public int getBaseEntry() {
+	public Integer getBaseEntry() {
 		return BaseEntry;
 	}
 
-	public void setBaseEntry(int baseEntry) {
+	public void setBaseEntry(Integer baseEntry) {
 		BaseEntry = baseEntry;
 	}
 
@@ -745,19 +745,19 @@ public class DocumentLines implements Serializable {
 		BaseLine = baseLine;
 	}
 
-	public double getBaseOpenQuantity() {
+	public Double getBaseOpenQuantity() {
 		return BaseOpenQuantity;
 	}
 
-	public void setBaseOpenQuantity(double baseOpenQuantity) {
+	public void setBaseOpenQuantity(Double baseOpenQuantity) {
 		BaseOpenQuantity = baseOpenQuantity;
 	}
 
-	public int getBaseType() {
+	public Integer getBaseType() {
 		return BaseType;
 	}
 
-	public void setBaseType(int baseType) {
+	public void setBaseType(Integer baseType) {
 		BaseType = baseType;
 	}
 
@@ -841,11 +841,11 @@ public class DocumentLines implements Serializable {
 		COGSCostingCode5 = cOGSCostingCode5;
 	}
 
-	public double getCommisionPercent() {
+	public Double getCommisionPercent() {
 		return CommisionPercent;
 	}
 
-	public void setCommisionPercent(double commisionPercent) {
+	public void setCommisionPercent(Double commisionPercent) {
 		CommisionPercent = commisionPercent;
 	}
 
@@ -873,19 +873,19 @@ public class DocumentLines implements Serializable {
 		CorrectionInvoiceItem = correctionInvoiceItem;
 	}
 
-	public double getCorrInvAmountToDiffAcct() {
+	public Double getCorrInvAmountToDiffAcct() {
 		return CorrInvAmountToDiffAcct;
 	}
 
-	public void setCorrInvAmountToDiffAcct(double corrInvAmountToDiffAcct) {
+	public void setCorrInvAmountToDiffAcct(Double corrInvAmountToDiffAcct) {
 		CorrInvAmountToDiffAcct = corrInvAmountToDiffAcct;
 	}
 
-	public double getCorrInvAmountToStock() {
+	public Double getCorrInvAmountToStock() {
 		return CorrInvAmountToStock;
 	}
 
-	public void setCorrInvAmountToStock(double corrInvAmountToStock) {
+	public void setCorrInvAmountToStock(Double corrInvAmountToStock) {
 		CorrInvAmountToStock = corrInvAmountToStock;
 	}
 
@@ -985,11 +985,11 @@ public class DocumentLines implements Serializable {
 		Currency = currency;
 	}
 
-	public double getDefectAndBreakup() {
+	public Double getDefectAndBreakup() {
 		return DefectAndBreakup;
 	}
 
-	public void setDefectAndBreakup(double defectAndBreakup) {
+	public void setDefectAndBreakup(Double defectAndBreakup) {
 		DefectAndBreakup = defectAndBreakup;
 	}
 
@@ -1001,11 +1001,11 @@ public class DocumentLines implements Serializable {
 		DeferredTax = deferredTax;
 	}
 
-	public double getDiscountPercent() {
+	public Double getDiscountPercent() {
 		return DiscountPercent;
 	}
 
-	public void setDiscountPercent(double discountPercent) {
+	public void setDiscountPercent(Double discountPercent) {
 		DiscountPercent = discountPercent;
 	}
 
@@ -1017,11 +1017,11 @@ public class DocumentLines implements Serializable {
 		DistributeExpense = distributeExpense;
 	}
 
-	public int getDocEntry() {
+	public Integer getDocEntry() {
 		return DocEntry;
 	}
 
-	public void setDocEntry(int docEntry) {
+	public void setDocEntry(Integer docEntry) {
 		DocEntry = docEntry;
 	}
 
@@ -1049,19 +1049,19 @@ public class DocumentLines implements Serializable {
 		EnableReturnCost = enableReturnCost;
 	}
 
-	public double getEqualizationTaxPercent() {
+	public Double getEqualizationTaxPercent() {
 		return EqualizationTaxPercent;
 	}
 
-	public void setEqualizationTaxPercent(double equalizationTaxPercent) {
+	public void setEqualizationTaxPercent(Double equalizationTaxPercent) {
 		EqualizationTaxPercent = equalizationTaxPercent;
 	}
 
-	public double getExciseAmount() {
+	public Double getExciseAmount() {
 		return ExciseAmount;
 	}
 
-	public void setExciseAmount(double exciseAmount) {
+	public void setExciseAmount(Double exciseAmount) {
 		ExciseAmount = exciseAmount;
 	}
 
@@ -1073,35 +1073,35 @@ public class DocumentLines implements Serializable {
 		ExLineNo = exLineNo;
 	}
 
-	public double getFactor1() {
+	public Double getFactor1() {
 		return Factor1;
 	}
 
-	public void setFactor1(double factor1) {
+	public void setFactor1(Double factor1) {
 		Factor1 = factor1;
 	}
 
-	public double getFactor2() {
+	public Double getFactor2() {
 		return Factor2;
 	}
 
-	public void setFactor2(double factor2) {
+	public void setFactor2(Double factor2) {
 		Factor2 = factor2;
 	}
 
-	public double getFactor3() {
+	public Double getFactor3() {
 		return Factor3;
 	}
 
-	public void setFactor3(double factor3) {
+	public void setFactor3(Double factor3) {
 		Factor3 = factor3;
 	}
 
-	public double getFactor4() {
+	public Double getFactor4() {
 		return Factor4;
 	}
 
-	public void setFactor4(double factor4) {
+	public void setFactor4(Double factor4) {
 		Factor4 = factor4;
 	}
 
@@ -1121,75 +1121,75 @@ public class DocumentLines implements Serializable {
 		FreeText = freeText;
 	}
 
-	public int getGrossBase() {
+	public Integer getGrossBase() {
 		return GrossBase;
 	}
 
-	public void setGrossBase(int grossBase) {
+	public void setGrossBase(Integer grossBase) {
 		GrossBase = grossBase;
 	}
 
-	public double getGrossBuyPrice() {
+	public Double getGrossBuyPrice() {
 		return GrossBuyPrice;
 	}
 
-	public void setGrossBuyPrice(double grossBuyPrice) {
+	public void setGrossBuyPrice(Double grossBuyPrice) {
 		GrossBuyPrice = grossBuyPrice;
 	}
 
-	public double getGrossProfitTotalBasePrice() {
+	public Double getGrossProfitTotalBasePrice() {
 		return GrossProfitTotalBasePrice;
 	}
 
-	public void setGrossProfitTotalBasePrice(double grossProfitTotalBasePrice) {
+	public void setGrossProfitTotalBasePrice(Double grossProfitTotalBasePrice) {
 		GrossProfitTotalBasePrice = grossProfitTotalBasePrice;
 	}
 
-	public double getHeight1() {
+	public Double getHeight1() {
 		return Height1;
 	}
 
-	public void setHeight1(double height1) {
+	public void setHeight1(Double height1) {
 		Height1 = height1;
 	}
 
-	public double getHeight2() {
+	public Double getHeight2() {
 		return Height2;
 	}
 
-	public void setHeight2(double height2) {
+	public void setHeight2(Double height2) {
 		Height2 = height2;
 	}
 
-	public int getHeight2Unit() {
+	public Integer getHeight2Unit() {
 		return Height2Unit;
 	}
 
-	public void setHeight2Unit(int height2Unit) {
+	public void setHeight2Unit(Integer height2Unit) {
 		Height2Unit = height2Unit;
 	}
 
-	public int getHight1Unit() {
+	public Integer getHight1Unit() {
 		return Hight1Unit;
 	}
 
-	public void setHight1Unit(int hight1Unit) {
+	public void setHight1Unit(Integer hight1Unit) {
 		Hight1Unit = hight1Unit;
 	}
 
-	public int getIncoterms() {
+	public Integer getIncoterms() {
 		return Incoterms;
 	}
 
-	public void setIncoterms(int incoterms) {
+	public void setIncoterms(Integer incoterms) {
 		Incoterms = incoterms;
 	}
 
-	public double getInventoryQuantity() {
+	public Double getInventoryQuantity() {
 		return InventoryQuantity;
 	}
 
-	public void setInventoryQuantity(double inventoryQuantity) {
+	public void setInventoryQuantity(Double inventoryQuantity) {
 		InventoryQuantity = inventoryQuantity;
 	}
 
@@ -1225,75 +1225,75 @@ public class DocumentLines implements Serializable {
 		ItemType = itemType;
 	}
 
-	public double getLastBuyDistributeSum() {
+	public Double getLastBuyDistributeSum() {
 		return LastBuyDistributeSum;
 	}
 
-	public void setLastBuyDistributeSum(double lastBuyDistributeSum) {
+	public void setLastBuyDistributeSum(Double lastBuyDistributeSum) {
 		LastBuyDistributeSum = lastBuyDistributeSum;
 	}
 
-	public double getLastBuyDistributeSumFc() {
+	public Double getLastBuyDistributeSumFc() {
 		return LastBuyDistributeSumFc;
 	}
 
-	public void setLastBuyDistributeSumFc(double lastBuyDistributeSumFc) {
+	public void setLastBuyDistributeSumFc(Double lastBuyDistributeSumFc) {
 		LastBuyDistributeSumFc = lastBuyDistributeSumFc;
 	}
 
-	public double getLastBuyDistributeSumSc() {
+	public Double getLastBuyDistributeSumSc() {
 		return LastBuyDistributeSumSc;
 	}
 
-	public void setLastBuyDistributeSumSc(double lastBuyDistributeSumSc) {
+	public void setLastBuyDistributeSumSc(Double lastBuyDistributeSumSc) {
 		LastBuyDistributeSumSc = lastBuyDistributeSumSc;
 	}
 
-	public double getLastBuyInmPrice() {
+	public Double getLastBuyInmPrice() {
 		return LastBuyInmPrice;
 	}
 
-	public void setLastBuyInmPrice(double lastBuyInmPrice) {
+	public void setLastBuyInmPrice(Double lastBuyInmPrice) {
 		LastBuyInmPrice = lastBuyInmPrice;
 	}
 
-	public double getLengh1() {
+	public Double getLengh1() {
 		return Lengh1;
 	}
 
-	public void setLengh1(double lengh1) {
+	public void setLengh1(Double lengh1) {
 		Lengh1 = lengh1;
 	}
 
-	public int getLengh1Unit() {
+	public Integer getLengh1Unit() {
 		return Lengh1Unit;
 	}
 
-	public void setLengh1Unit(int lengh1Unit) {
+	public void setLengh1Unit(Integer lengh1Unit) {
 		Lengh1Unit = lengh1Unit;
 	}
 
-	public double getLengh2() {
+	public Double getLengh2() {
 		return Lengh2;
 	}
 
-	public void setLengh2(double lengh2) {
+	public void setLengh2(Double lengh2) {
 		Lengh2 = lengh2;
 	}
 
-	public int getLengh2Unit() {
+	public Integer getLengh2Unit() {
 		return Lengh2Unit;
 	}
 
-	public void setLengh2Unit(int lengh2Unit) {
+	public void setLengh2Unit(Integer lengh2Unit) {
 		Lengh2Unit = lengh2Unit;
 	}
 
-	public int getLineNum() {
+	public Integer getLineNum() {
 		return LineNum;
 	}
 
-	public void setLineNum(int lineNum) {
+	public void setLineNum(Integer lineNum) {
 		LineNum = lineNum;
 	}
 
@@ -1313,11 +1313,11 @@ public class DocumentLines implements Serializable {
 		LineTaxJurisdictions = lineTaxJurisdictions;
 	}
 
-	public double getLineTotal() {
+	public Double getLineTotal() {
 		return LineTotal;
 	}
 
-	public void setLineTotal(double lineTotal) {
+	public void setLineTotal(Double lineTotal) {
 		LineTotal = lineTotal;
 	}
 
@@ -1337,11 +1337,11 @@ public class DocumentLines implements Serializable {
 		LineVendor = lineVendor;
 	}
 
-	public int getLocationCode() {
+	public Integer getLocationCode() {
 		return LocationCode;
 	}
 
-	public void setLocationCode(int locationCode) {
+	public void setLocationCode(Integer locationCode) {
 		LocationCode = locationCode;
 	}
 
@@ -1353,51 +1353,51 @@ public class DocumentLines implements Serializable {
 		MeasureUnit = measureUnit;
 	}
 
-	public double getNetTaxAmount() {
+	public Double getNetTaxAmount() {
 		return NetTaxAmount;
 	}
 
-	public void setNetTaxAmount(double netTaxAmount) {
+	public void setNetTaxAmount(Double netTaxAmount) {
 		NetTaxAmount = netTaxAmount;
 	}
 
-	public double getNetTaxAmountFC() {
+	public Double getNetTaxAmountFC() {
 		return NetTaxAmountFC;
 	}
 
-	public void setNetTaxAmountFC(double netTaxAmountFC) {
+	public void setNetTaxAmountFC(Double netTaxAmountFC) {
 		NetTaxAmountFC = netTaxAmountFC;
 	}
 
-	public double getNetTaxAmountSC() {
+	public Double getNetTaxAmountSC() {
 		return NetTaxAmountSC;
 	}
 
-	public void setNetTaxAmountSC(double netTaxAmountSC) {
+	public void setNetTaxAmountSC(Double netTaxAmountSC) {
 		NetTaxAmountSC = netTaxAmountSC;
 	}
 
-	public double getOpenAmount() {
+	public Double getOpenAmount() {
 		return OpenAmount;
 	}
 
-	public void setOpenAmount(double openAmount) {
+	public void setOpenAmount(Double openAmount) {
 		OpenAmount = openAmount;
 	}
 
-	public double getOpenAmountFC() {
+	public Double getOpenAmountFC() {
 		return OpenAmountFC;
 	}
 
-	public void setOpenAmountFC(double openAmountFC) {
+	public void setOpenAmountFC(Double openAmountFC) {
 		OpenAmountFC = openAmountFC;
 	}
 
-	public double getOpenAmountSC() {
+	public Double getOpenAmountSC() {
 		return OpenAmountSC;
 	}
 
-	public void setOpenAmountSC(double openAmountSC) {
+	public void setOpenAmountSC(Double openAmountSC) {
 		OpenAmountSC = openAmountSC;
 	}
 
@@ -1409,19 +1409,19 @@ public class DocumentLines implements Serializable {
 		OriginalItem = originalItem;
 	}
 
-	public double getPackageQuantity() {
+	public Double getPackageQuantity() {
 		return PackageQuantity;
 	}
 
-	public void setPackageQuantity(double packageQuantity) {
+	public void setPackageQuantity(Double packageQuantity) {
 		PackageQuantity = packageQuantity;
 	}
 
-	public int getParentLineNum() {
+	public Integer getParentLineNum() {
 		return ParentLineNum;
 	}
 
-	public void setParentLineNum(int parentLineNum) {
+	public void setParentLineNum(Integer parentLineNum) {
 		ParentLineNum = parentLineNum;
 	}
 
@@ -1433,19 +1433,19 @@ public class DocumentLines implements Serializable {
 		PartialRetirement = partialRetirement;
 	}
 
-	public int getPickListIdNumber() {
+	public Integer getPickListIdNumber() {
 		return PickListIdNumber;
 	}
 
-	public void setPickListIdNumber(int pickListIdNumber) {
+	public void setPickListIdNumber(Integer pickListIdNumber) {
 		PickListIdNumber = pickListIdNumber;
 	}
 
-	public double getPickQuantity() {
+	public Double getPickQuantity() {
 		return PickQuantity;
 	}
 
-	public void setPickQuantity(double pickQuantity) {
+	public void setPickQuantity(Double pickQuantity) {
 		PickQuantity = pickQuantity;
 	}
 
@@ -1473,35 +1473,35 @@ public class DocumentLines implements Serializable {
 		POTargetEntry = pOTargetEntry;
 	}
 
-	public int getPOTargetNum() {
+	public Integer getPOTargetNum() {
 		return POTargetNum;
 	}
 
-	public void setPOTargetNum(int pOTargetNum) {
+	public void setPOTargetNum(Integer pOTargetNum) {
 		POTargetNum = pOTargetNum;
 	}
 
-	public int getPOTargetRowNum() {
+	public Integer getPOTargetRowNum() {
 		return POTargetRowNum;
 	}
 
-	public void setPOTargetRowNum(int pOTargetRowNum) {
+	public void setPOTargetRowNum(Integer pOTargetRowNum) {
 		POTargetRowNum = pOTargetRowNum;
 	}
 
-	public double getPrice() {
+	public Double getPrice() {
 		return Price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		Price = price;
 	}
 
-	public double getPriceAfterVAT() {
+	public Double getPriceAfterVAT() {
 		return PriceAfterVAT;
 	}
 
-	public void setPriceAfterVAT(double priceAfterVAT) {
+	public void setPriceAfterVAT(Double priceAfterVAT) {
 		PriceAfterVAT = priceAfterVAT;
 	}
 
@@ -1513,35 +1513,35 @@ public class DocumentLines implements Serializable {
 		ProjectCode = projectCode;
 	}
 
-	public double getQuantity() {
+	public Double getQuantity() {
 		return Quantity;
 	}
 
-	public void setQuantity(double quantity) {
+	public void setQuantity(Double quantity) {
 		Quantity = quantity;
 	}
 
-	public double getRate() {
+	public Double getRate() {
 		return Rate;
 	}
 
-	public void setRate(double rate) {
+	public void setRate(Double rate) {
 		Rate = rate;
 	}
 
-	public double getRemainingOpenInventoryQuantity() {
+	public Double getRemainingOpenInventoryQuantity() {
 		return RemainingOpenInventoryQuantity;
 	}
 
-	public void setRemainingOpenInventoryQuantity(double remainingOpenInventoryQuantity) {
+	public void setRemainingOpenInventoryQuantity(Double remainingOpenInventoryQuantity) {
 		RemainingOpenInventoryQuantity = remainingOpenInventoryQuantity;
 	}
 
-	public double getRemainingOpenQuantity() {
+	public Double getRemainingOpenQuantity() {
 		return RemainingOpenQuantity;
 	}
 
-	public void setRemainingOpenQuantity(double remainingOpenQuantity) {
+	public void setRemainingOpenQuantity(Double remainingOpenQuantity) {
 		RemainingOpenQuantity = remainingOpenQuantity;
 	}
 
@@ -1553,59 +1553,59 @@ public class DocumentLines implements Serializable {
 		RequiredDate = requiredDate;
 	}
 
-	public double getRequiredQuantity() {
+	public Double getRequiredQuantity() {
 		return RequiredQuantity;
 	}
 
-	public void setRequiredQuantity(double requiredQuantity) {
+	public void setRequiredQuantity(Double requiredQuantity) {
 		RequiredQuantity = requiredQuantity;
 	}
 
-	public double getRetirementAPC() {
+	public Double getRetirementAPC() {
 		return RetirementAPC;
 	}
 
-	public void setRetirementAPC(double retirementAPC) {
+	public void setRetirementAPC(Double retirementAPC) {
 		RetirementAPC = retirementAPC;
 	}
 
-	public double getRetirementQuantity() {
+	public Double getRetirementQuantity() {
 		return RetirementQuantity;
 	}
 
-	public void setRetirementQuantity(double retirementQuantity) {
+	public void setRetirementQuantity(Double retirementQuantity) {
 		RetirementQuantity = retirementQuantity;
 	}
 
-	public double getReturnCost() {
+	public Double getReturnCost() {
 		return ReturnCost;
 	}
 
-	public void setReturnCost(double returnCost) {
+	public void setReturnCost(Double returnCost) {
 		ReturnCost = returnCost;
 	}
 
-	public double getRowTotalFC() {
+	public Double getRowTotalFC() {
 		return RowTotalFC;
 	}
 
-	public void setRowTotalFC(double rowTotalFC) {
+	public void setRowTotalFC(Double rowTotalFC) {
 		RowTotalFC = rowTotalFC;
 	}
 
-	public double getRowTotalSC() {
+	public Double getRowTotalSC() {
 		return RowTotalSC;
 	}
 
-	public void setRowTotalSC(double rowTotalSC) {
+	public void setRowTotalSC(Double rowTotalSC) {
 		RowTotalSC = rowTotalSC;
 	}
 
-	public int getSalesPersonCode() {
+	public Integer getSalesPersonCode() {
 		return SalesPersonCode;
 	}
 
-	public void setSalesPersonCode(int salesPersonCode) {
+	public void setSalesPersonCode(Integer salesPersonCode) {
 		SalesPersonCode = salesPersonCode;
 	}
 
@@ -1633,11 +1633,11 @@ public class DocumentLines implements Serializable {
 		ShipDate = shipDate;
 	}
 
-	public int getShippingMethod() {
+	public Integer getShippingMethod() {
 		return ShippingMethod;
 	}
 
-	public void setShippingMethod(int shippingMethod) {
+	public void setShippingMethod(Integer shippingMethod) {
 		ShippingMethod = shippingMethod;
 	}
 
@@ -1657,43 +1657,43 @@ public class DocumentLines implements Serializable {
 		ShipToDescription = shipToDescription;
 	}
 
-	public double getShortages() {
+	public Double getShortages() {
 		return Shortages;
 	}
 
-	public void setShortages(double shortages) {
+	public void setShortages(Double shortages) {
 		Shortages = shortages;
 	}
 
-	public double getStockDistributesum() {
+	public Double getStockDistributesum() {
 		return StockDistributesum;
 	}
 
-	public void setStockDistributesum(double stockDistributesum) {
+	public void setStockDistributesum(Double stockDistributesum) {
 		StockDistributesum = stockDistributesum;
 	}
 
-	public double getStockDistributesumForeign() {
+	public Double getStockDistributesumForeign() {
 		return StockDistributesumForeign;
 	}
 
-	public void setStockDistributesumForeign(double stockDistributesumForeign) {
+	public void setStockDistributesumForeign(Double stockDistributesumForeign) {
 		StockDistributesumForeign = stockDistributesumForeign;
 	}
 
-	public double getStockDistributesumSystem() {
+	public Double getStockDistributesumSystem() {
 		return StockDistributesumSystem;
 	}
 
-	public void setStockDistributesumSystem(double stockDistributesumSystem) {
+	public void setStockDistributesumSystem(Double stockDistributesumSystem) {
 		StockDistributesumSystem = stockDistributesumSystem;
 	}
 
-	public double getStockInmPrice() {
+	public Double getStockInmPrice() {
 		return StockInmPrice;
 	}
 
-	public void setStockInmPrice(double stockInmPrice) {
+	public void setStockInmPrice(Double stockInmPrice) {
 		StockInmPrice = stockInmPrice;
 	}
 
@@ -1705,11 +1705,11 @@ public class DocumentLines implements Serializable {
 		SupplierCatNum = supplierCatNum;
 	}
 
-	public double getSurpluses() {
+	public Double getSurpluses() {
 		return Surpluses;
 	}
 
-	public void setSurpluses(double surpluses) {
+	public void setSurpluses(Double surpluses) {
 		Surpluses = surpluses;
 	}
 
@@ -1721,27 +1721,27 @@ public class DocumentLines implements Serializable {
 		SWW = sWW;
 	}
 
-	public double getTaxBeforeDPM() {
+	public Double getTaxBeforeDPM() {
 		return TaxBeforeDPM;
 	}
 
-	public void setTaxBeforeDPM(double taxBeforeDPM) {
+	public void setTaxBeforeDPM(Double taxBeforeDPM) {
 		TaxBeforeDPM = taxBeforeDPM;
 	}
 
-	public double getTaxBeforeDPMFC() {
+	public Double getTaxBeforeDPMFC() {
 		return TaxBeforeDPMFC;
 	}
 
-	public void setTaxBeforeDPMFC(double taxBeforeDPMFC) {
+	public void setTaxBeforeDPMFC(Double taxBeforeDPMFC) {
 		TaxBeforeDPMFC = taxBeforeDPMFC;
 	}
 
-	public double getTaxBeforeDPMSC() {
+	public Double getTaxBeforeDPMSC() {
 		return TaxBeforeDPMSC;
 	}
 
-	public void setTaxBeforeDPMSC(double taxBeforeDPMSC) {
+	public void setTaxBeforeDPMSC(Double taxBeforeDPMSC) {
 		TaxBeforeDPMSC = taxBeforeDPMSC;
 	}
 
@@ -1769,27 +1769,27 @@ public class DocumentLines implements Serializable {
 		TaxOnly = taxOnly;
 	}
 
-	public double getTaxPercentagePerRow() {
+	public Double getTaxPercentagePerRow() {
 		return TaxPercentagePerRow;
 	}
 
-	public void setTaxPercentagePerRow(double taxPercentagePerRow) {
+	public void setTaxPercentagePerRow(Double taxPercentagePerRow) {
 		TaxPercentagePerRow = taxPercentagePerRow;
 	}
 
-	public double getTaxPerUnit() {
+	public Double getTaxPerUnit() {
 		return TaxPerUnit;
 	}
 
-	public void setTaxPerUnit(double taxPerUnit) {
+	public void setTaxPerUnit(Double taxPerUnit) {
 		TaxPerUnit = taxPerUnit;
 	}
 
-	public double getTaxTotal() {
+	public Double getTaxTotal() {
 		return TaxTotal;
 	}
 
-	public void setTaxTotal(double taxTotal) {
+	public void setTaxTotal(Double taxTotal) {
 		TaxTotal = taxTotal;
 	}
 
@@ -1817,35 +1817,35 @@ public class DocumentLines implements Serializable {
 		ThirdParty = thirdParty;
 	}
 
-	public double getTotalEqualizationTax() {
+	public Double getTotalEqualizationTax() {
 		return TotalEqualizationTax;
 	}
 
-	public void setTotalEqualizationTax(double totalEqualizationTax) {
+	public void setTotalEqualizationTax(Double totalEqualizationTax) {
 		TotalEqualizationTax = totalEqualizationTax;
 	}
 
-	public double getTotalEqualizationTaxFC() {
+	public Double getTotalEqualizationTaxFC() {
 		return TotalEqualizationTaxFC;
 	}
 
-	public void setTotalEqualizationTaxFC(double totalEqualizationTaxFC) {
+	public void setTotalEqualizationTaxFC(Double totalEqualizationTaxFC) {
 		TotalEqualizationTaxFC = totalEqualizationTaxFC;
 	}
 
-	public double getTotalEqualizationTaxSC() {
+	public Double getTotalEqualizationTaxSC() {
 		return TotalEqualizationTaxSC;
 	}
 
-	public void setTotalEqualizationTaxSC(double totalEqualizationTaxSC) {
+	public void setTotalEqualizationTaxSC(Double totalEqualizationTaxSC) {
 		TotalEqualizationTaxSC = totalEqualizationTaxSC;
 	}
 
-	public double getTotalInclTax() {
+	public Double getTotalInclTax() {
 		return TotalInclTax;
 	}
 
-	public void setTotalInclTax(double totalInclTax) {
+	public void setTotalInclTax(Double totalInclTax) {
 		TotalInclTax = totalInclTax;
 	}
 
@@ -1857,11 +1857,11 @@ public class DocumentLines implements Serializable {
 		TransactionType = transactionType;
 	}
 
-	public int getTransportMode() {
+	public Integer getTransportMode() {
 		return TransportMode;
 	}
 
-	public void setTransportMode(int transportMode) {
+	public void setTransportMode(Integer transportMode) {
 		TransportMode = transportMode;
 	}
 
@@ -1905,11 +1905,11 @@ public class DocumentLines implements Serializable {
 		U_LineId = u_LineId;
 	}
 
-	public double getU_SCGCOM_GANac() {
+	public Double getU_SCGCOM_GANac() {
 		return U_SCGCOM_GANac;
 	}
 
-	public void setU_SCGCOM_GANac(double u_SCGCOM_GANac) {
+	public void setU_SCGCOM_GANac(Double u_SCGCOM_GANac) {
 		U_SCGCOM_GANac = u_SCGCOM_GANac;
 	}
 
@@ -1921,19 +1921,19 @@ public class DocumentLines implements Serializable {
 		U_ZonaPre = u_ZonaPre;
 	}
 
-	public double getUnitPrice() {
+	public Double getUnitPrice() {
 		return UnitPrice;
 	}
 
-	public void setUnitPrice(double unitPrice) {
+	public void setUnitPrice(Double unitPrice) {
 		UnitPrice = unitPrice;
 	}
 
-	public double getUnitsOfMeasurment() {
+	public Double getUnitsOfMeasurment() {
 		return UnitsOfMeasurment;
 	}
 
-	public void setUnitsOfMeasurment(double unitsOfMeasurment) {
+	public void setUnitsOfMeasurment(Double unitsOfMeasurment) {
 		UnitsOfMeasurment = unitsOfMeasurment;
 	}
 
@@ -1945,19 +1945,19 @@ public class DocumentLines implements Serializable {
 		UoMCode = uoMCode;
 	}
 
-	public int getUoMEntry() {
+	public Integer getUoMEntry() {
 		return UoMEntry;
 	}
 
-	public void setUoMEntry(int uoMEntry) {
+	public void setUoMEntry(Integer uoMEntry) {
 		UoMEntry = uoMEntry;
 	}
 
-	public int getUsage() {
+	public Integer getUsage() {
 		return Usage;
 	}
 
-	public void setUsage(int usage) {
+	public void setUsage(Integer usage) {
 		Usage = usage;
 	}
 
@@ -1985,27 +1985,27 @@ public class DocumentLines implements Serializable {
 		VendorNum = vendorNum;
 	}
 
-	public int getVisualOrder() {
+	public Integer getVisualOrder() {
 		return VisualOrder;
 	}
 
-	public void setVisualOrder(int visualOrder) {
+	public void setVisualOrder(Integer visualOrder) {
 		VisualOrder = visualOrder;
 	}
 
-	public double getVolume() {
+	public Double getVolume() {
 		return Volume;
 	}
 
-	public void setVolume(double volume) {
+	public void setVolume(Double volume) {
 		Volume = volume;
 	}
 
-	public int getVolumeUnit() {
+	public Integer getVolumeUnit() {
 		return VolumeUnit;
 	}
 
-	public void setVolumeUnit(int volumeUnit) {
+	public void setVolumeUnit(Integer volumeUnit) {
 		VolumeUnit = volumeUnit;
 	}
 
@@ -2017,67 +2017,67 @@ public class DocumentLines implements Serializable {
 		WarehouseCode = warehouseCode;
 	}
 
-	public double getWeight1() {
+	public Double getWeight1() {
 		return Weight1;
 	}
 
-	public void setWeight1(double weight1) {
+	public void setWeight1(Double weight1) {
 		Weight1 = weight1;
 	}
 
-	public int getWeight1Unit() {
+	public Integer getWeight1Unit() {
 		return Weight1Unit;
 	}
 
-	public void setWeight1Unit(int weight1Unit) {
+	public void setWeight1Unit(Integer weight1Unit) {
 		Weight1Unit = weight1Unit;
 	}
 
-	public double getWeight2() {
+	public Double getWeight2() {
 		return Weight2;
 	}
 
-	public void setWeight2(double weight2) {
+	public void setWeight2(Double weight2) {
 		Weight2 = weight2;
 	}
 
-	public int getWeight2Unit() {
+	public Integer getWeight2Unit() {
 		return Weight2Unit;
 	}
 
-	public void setWeight2Unit(int weight2Unit) {
+	public void setWeight2Unit(Integer weight2Unit) {
 		Weight2Unit = weight2Unit;
 	}
 
-	public double getWidth1() {
+	public Double getWidth1() {
 		return Width1;
 	}
 
-	public void setWidth1(double width1) {
+	public void setWidth1(Double width1) {
 		Width1 = width1;
 	}
 
-	public int getWidth1Unit() {
+	public Integer getWidth1Unit() {
 		return Width1Unit;
 	}
 
-	public void setWidth1Unit(int width1Unit) {
+	public void setWidth1Unit(Integer width1Unit) {
 		Width1Unit = width1Unit;
 	}
 
-	public double getWidth2() {
+	public Double getWidth2() {
 		return Width2;
 	}
 
-	public void setWidth2(double width2) {
+	public void setWidth2(Double width2) {
 		Width2 = width2;
 	}
 
-	public int getWidth2Unit() {
+	public Integer getWidth2Unit() {
 		return Width2Unit;
 	}
 
-	public void setWidth2Unit(int width2Unit) {
+	public void setWidth2Unit(Integer width2Unit) {
 		Width2Unit = width2Unit;
 	}
 
@@ -2108,7 +2108,7 @@ public class DocumentLines implements Serializable {
 	// GSON library for JSON
 	@Override
 	public String toString(){
-		Gson gson = new GsonBuilder().serializeNulls().create();
+		Gson gson = new GsonBuilder().create();
 		return gson.toJson(this);
 	}
 
