@@ -2,6 +2,8 @@ package com.hipstertech.service;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 //import org.apache.http.impl.client.HttpClients;
@@ -198,6 +200,8 @@ public class ServiceLayerClient {
 			line.setSalesPersonCode(lineSAP.getSalesPersonCode());
 			line.setTaxCode(lineSAP.getTaxCode());
 			line.setUnitPrice(lineSAP.getUnitPrice());
+			line.setQuantity(lineSAP.getQuantity());
+			line.setDiscountPercent(lineSAP.getDiscountPercent());
 			//line.setActualBaseLine(lineSAP.getActualBaseLine());
 			
 			if(type.equals(DocumentType.NC)) {
@@ -211,9 +215,18 @@ public class ServiceLayerClient {
 	}
 
 	private Document setDocumentValues(Document invoiceSAP,int serie, DocumentType type) throws ParseException {
+		
+		Date today = new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(today);
+		cal.add(Calendar.MONTH, 1);
+		Date todayPlus30Days = cal.getTime();
+		
 		Document invoiceResult = new Document();
 		invoiceResult.setCardCode(invoiceSAP.getCardCode());
 		invoiceResult.setComments(invoiceSAP.getComments());
+		invoiceResult.setDocDate(today);
+		invoiceResult.setDocDueDate(todayPlus30Days);
 		invoiceResult.setDocCurrency(invoiceSAP.getDocCurrency());
 		invoiceResult.setDocTotal(invoiceSAP.getDocTotal());
 		invoiceResult.setDocType(invoiceSAP.getDocType());
@@ -229,12 +242,13 @@ public class ServiceLayerClient {
 		invoiceResult.setU_NNE(invoiceSAP.getU_NNE());
 		invoiceResult.setU_NPR(invoiceSAP.getU_NPR());
 		invoiceResult.setU_NSP(invoiceSAP.getU_NSP());
-		invoiceResult.setDocObjectCode(invoiceSAP.getDocObjectCode());
-		invoiceResult.setIssuingReason(invoiceSAP.getIssuingReason());
-		invoiceResult.setRelatedType(invoiceSAP.getRelatedType());
+		invoiceResult.setU_TipoDoc(invoiceSAP.getU_TipoDoc());
+		invoiceResult.setDocObjectCode(type.equals(DocumentType.FE) ? "13" : "14");
+		//invoiceResult.setIssuingReason(invoiceSAP.getIssuingReason());
+		//invoiceResult.setRelatedType(invoiceSAP.getRelatedType());
+		//invoiceResult.setU_GTI_MOTIVOS(invoiceSAP.getU_GTI_MOTIVOS());
+		//invoiceResult.setU_TipoExon(invoiceSAP.getU_TipoExon());
 		invoiceResult.setSeries(serie);
-		invoiceResult.setU_GTI_MOTIVOS(invoiceSAP.getU_GTI_MOTIVOS());
-		invoiceResult.setU_TipoExon(invoiceSAP.getU_TipoExon());
 		if(type.equals(DocumentType.NC)) {
 			//TODO
 		}

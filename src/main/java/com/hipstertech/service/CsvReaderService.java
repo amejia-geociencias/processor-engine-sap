@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.csv.CSVFormat;
@@ -67,7 +69,9 @@ public class CsvReaderService {
 		line.setTaxCode(record.get("INV1_TAXCODE"));
 		line.setUnitPrice(record.get("INV1_PRICEBEFDI")==null?null:Double.parseDouble(record.get("INV1_PRICEBEFDI").replace(",","")));
 		line.setItemCode(record.get("INV1_ITEMCODE"));
-		line.setActualBaseLine(record.get("INV1_BASELINE"));
+		line.setQuantity(Double.parseDouble(record.get("INV1_QUANTITY")));
+		line.setDiscountPercent(Double.parseDouble(record.get("INV1_DISCPRCNT")));
+		//line.setActualBaseLine(record.get("INV1_BASELINE"));
 		if(type.equals(DocumentType.NC)) {
 			//TODO
 		}
@@ -75,14 +79,21 @@ public class CsvReaderService {
 	}
 
 	private Document setDocumentValues(CSVRecord record,int serie, DocumentType type) throws ParseException {
+		
+		Date today = new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(today);
+		cal.add(Calendar.MONTH, 1);
+		Date todayPlus30Days = cal.getTime();
+		
 		Document document;
 		document = new Document();
-		document.setDocNum(record.get("OINV_DOCNUM")==null?null:Integer.parseInt(record.get("OINV_DOCNUM")));
+		//document.setDocNum(record.get("OINV_DOCNUM")==null?null:Integer.parseInt(record.get("OINV_DOCNUM")));
 		document.setCardCode(record.get("OINV_CARDCODE"));
 		document.setComments(record.get("OINV_COMMENTS"));
 		document.setDocCurrency(record.get("OINV_DOCCUR"));
-		//document.setDocDate(record.get("OINV_DOCDATE")==null?null:new SimpleDateFormat("MMM dd, yyyy hh:mm:ss.S a").parse(record.get("OINV_DOCDATE")));
-		//document.setDocDueDate(record.get("OINV_DOCDUEDATE")==null?null:new SimpleDateFormat("MMM dd, yyyy hh:mm:ss.S a").parse(record.get("OINV_DOCDUEDATE")));
+		document.setDocDate(today);
+		document.setDocDueDate(todayPlus30Days);
 		document.setDocTotal(record.get("OINV_DOCTOTAL")==null?null:Double.parseDouble(record.get("OINV_DOCTOTAL").replace(",","")));
 		document.setDocType(record.get("OINV_DOCTYPE"));
 		document.setNumAtCard(record.get("OINV_NUMATCARD"));
@@ -92,16 +103,17 @@ public class CsvReaderService {
 		document.setReserveInvoice(record.get("OINV_RETINVOICE"));//CHECK!!!!!!!!!
 		document.setU_BDOC(record.get("OINV_U_BDOC"));
 		document.setU_FormPag(record.get("OINV_U_FORMPAG"));
+		document.setU_TipoDoc(record.get("OINV_U_TIPODOC"));
 		document.setU_NAR(record.get("OINV_U_NAR"));
 		document.setU_NCA(record.get("OINV_U_NCA"));
 		document.setU_NNE(record.get("OINV_U_NNE"));
 		document.setU_NPR(record.get("OINV_U_NPR"));
 		document.setU_NSP(record.get("OINV_U_NSP"));
-		document.setDocObjectCode("oInvoices");
-		document.setIssuingReason(Integer.parseInt(record.get("OINV_ISSREASON")));
-		document.setRelatedType(Integer.parseInt(record.get("OINV_RELATEDTYP")));
-		document.setU_GTI_MOTIVOS(Integer.parseInt(record.get("OINV_U_GTI_MOTIVOS")));
-		document.setU_TipoExon(Integer.parseInt(record.get("OINV_U_TIPOEXON")));
+		document.setDocObjectCode(type.equals(DocumentType.FE) ? "13" : "14"); 
+		//document.setIssuingReason(Integer.parseInt(record.get("OINV_ISSREASON")));
+		//document.setRelatedType(Integer.parseInt(record.get("OINV_RELATEDTYP")));
+		//document.setU_GTI_MOTIVOS(Integer.parseInt(record.get("OINV_U_GTI_MOTIVOS")));
+		//document.setU_TipoExon(Integer.parseInt(record.get("OINV_U_TIPOEXON")));
 		document.setSeries(serie);
 		
 		if(type.equals(DocumentType.NC)) {
