@@ -133,7 +133,7 @@ jhipster:
 # application:
 
 sap:
-  url: https://www.gruponacion.biz/SB1ServiceLayerSCG/b1s/v1
+  url: https://www.gruponacion.biz/SB1ServiceLayer/b1s/v1
   username: service3
   pwd: A12345
   bd: GN

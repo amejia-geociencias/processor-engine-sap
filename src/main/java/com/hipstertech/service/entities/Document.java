@@ -1,15 +1,11 @@
 package com.hipstertech.service.entities;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 
-public class Document extends BaseApiObject {
-
-	  public  Document()
-      {
-		  super.setResourceName("Documents");
-      }
+public class Document implements Serializable {
 
       
       public String Address;
