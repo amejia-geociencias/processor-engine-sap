@@ -15,9 +15,9 @@ public class CsvResources {
 	@Autowired
 	CsvReaderService csvReaderService;
 	
-	@GetMapping("/csv-get-doc/{docNum}")
-	public void getDoc(@PathVariable String docNum) {
-		csvReaderService.getDocumentByDocNumber(docNum);
+	@GetMapping("/csv-get-doc/{docNum}/{serie}")
+	public void getDoc(@PathVariable String docNum,@PathVariable  int serie) {
+		csvReaderService.getDocumentByDocNumber(docNum, serie);
 	}
 	
 }
