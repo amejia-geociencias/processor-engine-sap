@@ -67,7 +67,7 @@ public class CsvReaderService {
 		line.setPriceAfterVAT(record.get("INV1_PRICEAFVAT")==null?null:Double.parseDouble(record.get("INV1_PRICEAFVAT").replace(",","")));
 		line.setSalesPersonCode(record.get("INV1_SLPCODE")==null?null:Integer.parseInt(record.get("INV1_SLPCODE")));
 		line.setTaxCode(record.get("INV1_TAXCODE"));
-		//line.setUnitPrice(record.get(""));???????????????????????
+		line.setUnitPrice(record.get("INV1_PRICEBEFDI")==null?null:Double.parseDouble(record.get("INV1_PRICEBEFDI").replace(",","")));
 		return line;
 	}
 
@@ -78,8 +78,8 @@ public class CsvReaderService {
 		document.setCardCode(record.get("OINV_CARDCODE"));
 		document.setComments(record.get("OINV_COMMENTS"));
 		document.setDocCurrency(record.get("OINV_DOCCUR"));
-		document.setDocDate(record.get("OINV_DOCDATE")==null?null:new SimpleDateFormat("MMM dd, yyyy hh:mm:ss.S a").parse(record.get("OINV_DOCDATE")));
-		document.setDocDueDate(record.get("OINV_DOCDUEDATE")==null?null:new SimpleDateFormat("MMM dd, yyyy hh:mm:ss.S a").parse(record.get("OINV_DOCDUEDATE")));
+		//document.setDocDate(record.get("OINV_DOCDATE")==null?null:new SimpleDateFormat("MMM dd, yyyy hh:mm:ss.S a").parse(record.get("OINV_DOCDATE")));
+		//document.setDocDueDate(record.get("OINV_DOCDUEDATE")==null?null:new SimpleDateFormat("MMM dd, yyyy hh:mm:ss.S a").parse(record.get("OINV_DOCDUEDATE")));
 		document.setDocTotal(record.get("OINV_DOCTOTAL")==null?null:Double.parseDouble(record.get("OINV_DOCTOTAL").replace(",","")));
 		document.setDocType(record.get("OINV_DOCTYPE"));
 		document.setNumAtCard(record.get("OINV_NUMATCARD"));
