@@ -204,6 +204,10 @@ public class ServiceLayerClient {
 			line.setDiscountPercent(lineSAP.getDiscountPercent());
 			//line.setActualBaseLine(lineSAP.getActualBaseLine());
 			
+			if(type.equals(DocumentType.FE)) {
+				
+			}
+			
 			if(type.equals(DocumentType.NC)) {
 				line.setBaseEntry(docEntry);
 				line.setBaseLine(lineSAP.getLineNum()+"");
@@ -236,8 +240,6 @@ public class ServiceLayerClient {
 		invoiceResult.setNumAtCard(invoiceSAP.getNumAtCard());
 		invoiceResult.setReference1(invoiceSAP.getReference1());
 		invoiceResult.setReference2(invoiceSAP.getReference2());
-		invoiceResult.setReserve(invoiceSAP.getReserve());
-		invoiceResult.setReserveInvoice(invoiceSAP.getReserveInvoice());
 		invoiceResult.setU_BDOC(invoiceSAP.getU_BDOC());
 		invoiceResult.setU_FormPag(invoiceSAP.getU_FormPag());
 		invoiceResult.setU_NAR(invoiceSAP.getU_NAR());
@@ -254,6 +256,11 @@ public class ServiceLayerClient {
 		invoiceResult.setSeries(serie);
 		if(type.equals(DocumentType.NC)) {
 			invoiceResult.setU_BDOC(invoiceSAP.getDocNum()+"");
+		}
+		
+		if(type.equals(DocumentType.FE)) {
+			invoiceResult.setReserve(invoiceSAP.getReserve());
+			invoiceResult.setReserveInvoice(invoiceSAP.getReserveInvoice());
 		}
 		return invoiceResult;
 	}

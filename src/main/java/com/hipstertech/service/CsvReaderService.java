@@ -78,6 +78,12 @@ public class CsvReaderService {
 			line.setBaseType(13);
 			line.setWarehouseCode(record.get("INV1_WHSCODE"));
 		}
+		
+		if(type.equals(DocumentType.FE)) {
+			
+		}
+		
+		
 		return line;
 	}
 
@@ -102,16 +108,14 @@ public class CsvReaderService {
 		document.setNumAtCard(record.get("OINV_NUMATCARD"));
 		document.setReference1(record.get("OINV_REF1"));
 		document.setReference2(record.get("OINV_REF2"));
-		document.setReserve(record.get("OINV_RESERVE"));
-		document.setReserveInvoice(record.get("OINV_RETINVOICE"));//CHECK!!!!!!!!!
 		document.setU_BDOC(record.get("OINV_U_BDOC"));
-		document.setU_FormPag(record.get("OINV_U_FORMPAG"));
+		//document.setU_FormPag(record.get("OINV_U_FORMPAG"));
 		document.setU_TipoDoc(record.get("OINV_U_TIPODOC"));
-		document.setU_NAR(record.get("OINV_U_NAR"));
-		document.setU_NCA(record.get("OINV_U_NCA"));
-		document.setU_NNE(record.get("OINV_U_NNE"));
-		document.setU_NPR(record.get("OINV_U_NPR"));
-		document.setU_NSP(record.get("OINV_U_NSP"));
+		//document.setU_NAR(record.get("OINV_U_NAR"));
+		//document.setU_NCA(record.get("OINV_U_NCA"));
+		//document.setU_NNE(record.get("OINV_U_NNE"));
+		//document.setU_NPR(record.get("OINV_U_NPR"));
+		//document.setU_NSP(record.get("OINV_U_NSP"));
 		document.setDocObjectCode(type.equals(DocumentType.FE) ? "13" : "14"); 
 		//document.setIssuingReason(Integer.parseInt(record.get("OINV_ISSREASON")));
 		//document.setRelatedType(Integer.parseInt(record.get("OINV_RELATEDTYP")));
@@ -122,6 +126,12 @@ public class CsvReaderService {
 		if(type.equals(DocumentType.NC)) {
 			document.setU_BDOC(record.get("OINV_DOCNUM"));
 		}
+		
+		if(type.equals(DocumentType.FE)) {
+			document.setReserve(record.get("OINV_RESERVE"));
+			document.setReserveInvoice(record.get("OINV_RETINVOICE"));//CHECK!!!!!!!!!
+		}
+		
 		
 		return document;
 	}
