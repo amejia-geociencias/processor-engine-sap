@@ -205,7 +205,10 @@ public class ServiceLayerClient {
 			//line.setActualBaseLine(lineSAP.getActualBaseLine());
 			
 			if(type.equals(DocumentType.NC)) {
-				//TODO
+				line.setBaseEntry(lineSAP.getBaseEntry());
+				line.setBaseLine(lineSAP.getBaseLine());
+				line.setBaseType(13);
+				line.setWarehouseCode(lineSAP.getWarehouseCode());
 			}
 			
 			resultLines.add(line);
@@ -250,7 +253,7 @@ public class ServiceLayerClient {
 		//invoiceResult.setU_TipoExon(invoiceSAP.getU_TipoExon());
 		invoiceResult.setSeries(serie);
 		if(type.equals(DocumentType.NC)) {
-			//TODO
+			invoiceResult.setU_BDOC(invoiceSAP.getDocNum()+"");
 		}
 		return invoiceResult;
 	}

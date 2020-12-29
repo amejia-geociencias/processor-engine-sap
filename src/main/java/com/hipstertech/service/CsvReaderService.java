@@ -73,7 +73,10 @@ public class CsvReaderService {
 		line.setDiscountPercent(Double.parseDouble(record.get("INV1_DISCPRCNT")));
 		//line.setActualBaseLine(record.get("INV1_BASELINE"));
 		if(type.equals(DocumentType.NC)) {
-			//TODO
+			line.setBaseEntry(Integer.parseInt(record.get("OINV_DOCENTRY")));
+			line.setBaseLine(record.get("INV1_LINENUM"));
+			line.setBaseType(13);
+			line.setWarehouseCode(record.get("INV1_WHSCODE"));
 		}
 		return line;
 	}
@@ -117,7 +120,7 @@ public class CsvReaderService {
 		document.setSeries(serie);
 		
 		if(type.equals(DocumentType.NC)) {
-			//TODO
+			document.setU_BDOC(record.get("OINV_DOCNUM"));
 		}
 		
 		return document;
