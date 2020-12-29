@@ -95,15 +95,31 @@ public class ServiceLayerClient {
 					.build();
 			Response response = client.newCall(request).execute();
 
-
 			return true;
 		}catch (Exception e) {
 			log.error(e.getMessage());
 			return false;
 		}
-
 	}
-	
+
+	public Document GetDocument(int docNumber) {
+		try {
+//			OkHttpClient client = new OkHttpClient().newBuilder()
+//					.build();
+//			Request request = new Request.Builder()
+//					.url("https://www.gruponacion.biz/SB1ServiceLayer/b1s/v1/Invoices?$filter=DocNum eq 1066263")
+//					.method("GET", null)
+//					.addHeader("Content-Type", "application/json")
+//					.addHeader("Cookie", "CompanyDB=ZTESTGN; B1SESSION=e050834a-4970-11eb-8000-026956b68215")
+//					.build();
+//			Response response = client.newCall(request).execute();
+			return null;
+		}catch (Exception e) {
+			log.error(e.getMessage());
+			return null;
+		}
+	}
+
 
 
 

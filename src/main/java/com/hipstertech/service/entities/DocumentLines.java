@@ -1,9 +1,13 @@
 package com.hipstertech.service.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class DocumentLines {
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class DocumentLines implements Serializable {
 
 
 	public String AccountCode ;
@@ -2101,6 +2105,11 @@ public class DocumentLines {
 		WTLiable = wTLiable;
 	}
 	
-	
+	// GSON library for JSON
+	@Override
+	public String toString(){
+		Gson gson = new GsonBuilder().serializeNulls().create();
+		return gson.toJson(this);
+	}
 
 }

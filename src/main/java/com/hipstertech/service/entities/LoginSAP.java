@@ -2,6 +2,8 @@ package com.hipstertech.service.entities;
 
 import java.io.Serializable;
 
+import com.google.gson.Gson;
+
 public class LoginSAP implements Serializable {
 
 	/**
@@ -38,7 +40,7 @@ public class LoginSAP implements Serializable {
 	// GSON library for JSON
 	@Override
 	public String toString(){
-	    return new com.google.gson.Gson().toJson(this);
+	    return new Gson().toJson(this);
 	}
 	
 	
