@@ -1,0 +1,45 @@
+
+enum Status {
+    PENDING, PROCESSED, ERROR, INPROGRESS
+}
+
+enum DocumentType {
+    FE, NC
+}
+
+enum SourceType {
+    FILE, SL
+}
+
+entity Job{
+	description String,
+    documentType DocumentType,
+    serie Integer,
+    status Status,
+    sourceType SourceType
+}
+
+
+entity MarketingDocuments {
+	/**
+	* The firstname attribute.
+	*/
+	docNumber Integer,
+	status Status,
+	comments String,
+	processedDate Instant
+}
+
+relationship OneToOne {
+	MarketingDocuments{job} to Job
+}
+
+
+// Use Data Transfer Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

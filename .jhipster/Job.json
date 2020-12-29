@@ -1,0 +1,40 @@
+{
+  "name": "Job",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "documentType",
+      "fieldType": "DocumentType",
+      "fieldValues": "FE,NC"
+    },
+    {
+      "fieldName": "serie",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "PENDING,PROCESSED,ERROR,INPROGRESS"
+    },
+    {
+      "fieldName": "sourceType",
+      "fieldType": "SourceType",
+      "fieldValues": "FILE,SL"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201229011208",
+  "entityTableName": "job",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

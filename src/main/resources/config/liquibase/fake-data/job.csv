@@ -1,0 +1,11 @@
+id;description;document_type;serie;status;source_type
+1;Armenia compelling;NC;84974;ERROR;SL
+2;Lebanese Pound Keyboard;NC;9604;ERROR;SL
+3;auxiliary action-items sensor;NC;44752;PENDING;FILE
+4;Mills;FE;16460;ERROR;SL
+5;Handcrafted Money Market Account;FE;94556;PROCESSED;SL
+6;Developer Markets;FE;33638;ERROR;SL
+7;Turnpike;NC;46861;ERROR;SL
+8;Home Loan Account Legacy fuchsia;NC;13003;PROCESSED;SL
+9;Extension;FE;85415;PENDING;FILE
+10;Idaho out-of-the-box;NC;18092;PROCESSED;SL

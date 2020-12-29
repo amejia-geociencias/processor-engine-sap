@@ -1,0 +1,44 @@
+{
+  "name": "MarketingDocuments",
+  "fields": [
+    {
+      "fieldName": "docNumber",
+      "fieldType": "Integer",
+      "javadoc": "The firstname attribute."
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "PENDING,PROCESSED,ERROR,INPROGRESS"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "processedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "job",
+      "otherEntityRelationshipName": "marketingDocuments",
+      "relationshipName": "job",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20201229011308",
+  "entityTableName": "marketing_documents",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

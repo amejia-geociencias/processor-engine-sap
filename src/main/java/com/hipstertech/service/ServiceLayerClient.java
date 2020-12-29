@@ -1,5 +1,8 @@
 package com.hipstertech.service;
 
+import java.text.ParseException;
+
+import org.apache.commons.csv.CSVRecord;
 //import org.apache.http.impl.client.HttpClients;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +10,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.hipstertech.service.entities.Document;
+import com.hipstertech.service.entities.DocumentLines;
 import com.hipstertech.service.entities.LoginSAP;
 
 import okhttp3.MediaType;
@@ -102,18 +108,14 @@ public class ServiceLayerClient {
 		}
 	}
 
-	public Document GetDocument(int docNumber) {
+	public Document GetInvoice(int docNumber,int serie) {
 		try {
-//			OkHttpClient client = new OkHttpClient().newBuilder()
-//					.build();
-//			Request request = new Request.Builder()
-//					.url("https://www.gruponacion.biz/SB1ServiceLayer/b1s/v1/Invoices?$filter=DocNum eq 1066263")
-//					.method("GET", null)
-//					.addHeader("Content-Type", "application/json")
-//					.addHeader("Cookie", "CompanyDB=ZTESTGN; B1SESSION=e050834a-4970-11eb-8000-026956b68215")
-//					.build();
-//			Response response = client.newCall(request).execute();
+			Document invoiceSAP = GetSAPDocument(docNumber, "Invoices");
+			Document documentResult = setDocumentValues(invoiceSAP, serie);
+
+
 			return null;
+
 		}catch (Exception e) {
 			log.error(e.getMessage());
 			return null;
@@ -121,9 +123,73 @@ public class ServiceLayerClient {
 	}
 
 
+	private Document GetSAPDocument(int docNumber, String resource) {
+		try {
+			OkHttpClient client = new OkHttpClient().newBuilder()
+					.build();
+			Request request = new Request.Builder()
+					.url(url + "/"+  resource + "?$filter=DocNum eq " + docNumber)
+					.method("GET", null)
+					.addHeader("Content-Type", "application/json")
+					.addHeader("Cookie", cookie)
+					.build();
+			Response response = client.newCall(request).execute();
+			Gson gson = new GsonBuilder().serializeNulls().create();
+			Document entity = gson.fromJson(response.toString(), Document.class);
+			return entity;
+		}catch (Exception e) {
+			log.error(e.getMessage());
+			return null;
+		}
+	}
 
+	private DocumentLines getLineWithValues(DocumentLines lineSAP) {
+		DocumentLines line = new DocumentLines();
+		line.setAccountCode(lineSAP.getAccountCode());
+		line.setCOGSCostingCode(lineSAP.getCOGSCostingCode());
+		line.setCOGSCostingCode2(lineSAP.getCOGSCostingCode2());
+		line.setCOGSCostingCode3(lineSAP.getCOGSCostingCode3());
+		line.setCOGSCostingCode4(lineSAP.getCOGSCostingCode4());
+		line.setCOGSCostingCode5(lineSAP.getCOGSCostingCode5());
+		line.setCostingCode(lineSAP.getCostingCode());
+		line.setCostingCode2(lineSAP.getCostingCode2());
+		line.setCostingCode3(lineSAP.getCostingCode3());
+		line.setCostingCode4(lineSAP.getCostingCode4());
+		line.setCostingCode5(lineSAP.getCostingCode5());
+		line.setCurrency(lineSAP.getCurrency());
+		line.setItemDescription(lineSAP.getItemDescription());
+		line.setLineTotal(lineSAP.getLineTotal());
+		line.setOpenAmount(lineSAP.getOpenAmount());
+		line.setPrice(lineSAP.getPrice());
+		line.setPriceAfterVAT(lineSAP.getPriceAfterVAT());
+		line.setSalesPersonCode(lineSAP.getSalesPersonCode());
+		line.setTaxCode(lineSAP.getTaxCode());
+		line.setUnitPrice(lineSAP.getUnitPrice());
+		return line;
+	}
 
-
+	private Document setDocumentValues(Document invoiceSAP,int serie) throws ParseException {
+		Document invoiceResult = new Document();
+		invoiceResult.setCardCode(invoiceSAP.getCardCode());
+		invoiceResult.setComments(invoiceSAP.getComments());
+		invoiceResult.setDocCurrency(invoiceSAP.getDocCurrency());
+		invoiceResult.setDocTotal(invoiceSAP.getDocTotal());
+		invoiceResult.setDocType(invoiceSAP.getDocType());
+		invoiceResult.setNumAtCard(invoiceSAP.getNumAtCard());
+		invoiceResult.setReference1(invoiceSAP.getReference1());
+		invoiceResult.setReference2(invoiceSAP.getReference2());
+		invoiceResult.setReserve(invoiceSAP.getReserve());
+		invoiceResult.setReserveInvoice(invoiceSAP.getReserveInvoice());
+		invoiceResult.setU_BDOC(invoiceSAP.getU_BDOC());
+		invoiceResult.setU_FormPag(invoiceSAP.getU_FormPag());
+		invoiceResult.setU_NAR(invoiceSAP.getU_NAR());
+		invoiceResult.setU_NCA(invoiceSAP.getU_NCA());
+		invoiceResult.setU_NNE(invoiceSAP.getU_NNE());
+		invoiceResult.setU_NPR(invoiceSAP.getU_NPR());
+		invoiceResult.setU_NSP(invoiceSAP.getU_NSP());
+		invoiceResult.setSeries(serie);
+		return invoiceResult;
+	}
 
 
 }
