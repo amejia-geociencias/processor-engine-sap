@@ -632,6 +632,17 @@ public class DocumentLines implements Serializable {
 	/// </summary>
 
 	public String WTLiable ;
+	
+	public String U_PLAZOSUS;
+	
+	public String getU_PLAZOSUS() {
+		return U_PLAZOSUS;
+	}
+
+	public void setU_PLAZOSUS(String u_PLAZOSUS) {
+		U_PLAZOSUS = u_PLAZOSUS;
+	}
+
 
 	public String getAccountCode() {
 		return AccountCode;

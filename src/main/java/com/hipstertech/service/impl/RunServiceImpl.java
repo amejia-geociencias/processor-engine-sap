@@ -74,15 +74,24 @@ public class RunServiceImpl implements RunService {
 
 				if(documentInfo != null) {
 					//Create document
-					Document createdDocument = serviceLayerClient.createDocument(documentInfo, resourceName);
-
-					//Update status document
-					boolean success = createdDocument !=null && createdDocument.getDocNum() !=null;
-					i.setProcessedDate(Instant.now());
-					i.setComments(success ? "Documento generado " + createdDocument.getDocNum()  : "Error en SAP createdDocument");
-					i.setStatus(success ? Status.PROCESSED : Status.ERROR);
-					marketingDocumentsService.save(i);
-					
+					Document createdDocument = null;
+					try {
+						createdDocument = serviceLayerClient.createDocument(documentInfo, resourceName);
+						
+						//Update status document
+						boolean success = createdDocument !=null && createdDocument.getDocNum() !=null;
+						i.setProcessedDate(Instant.now());
+						i.setComments(success ? "Documento generado " + createdDocument.getDocNum()  : "Error en SAP createdDocument");
+						i.setStatus(success ? Status.PROCESSED : Status.ERROR);
+						marketingDocumentsService.save(i);
+						
+					} catch (Exception e) {
+						
+						i.setProcessedDate(Instant.now());
+						i.setComments("Error: " + e.getMessage());
+						i.setStatus(Status.ERROR);
+						marketingDocumentsService.save(i);
+					}
 				}else {
 					i.setProcessedDate(Instant.now());
 					i.setComments("Error documento no encontrado");

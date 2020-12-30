@@ -2,13 +2,16 @@ package com.hipstertech.service.entities;
 
 import java.util.Date;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class BatchNumberObject {
 
 
 	public Date AddmisionDate;
 
 
-	public int BaseLineNumber;
+	public Integer BaseLineNumber;
 
 
 	public String BatchNumber;
@@ -17,7 +20,7 @@ public class BatchNumberObject {
 	public Date ExpiryDate;
 
 
-	public String InternalSerialNumber;
+	public String IntegerernalSerialNumber;
 
 
 	public String Location;
@@ -32,13 +35,13 @@ public class BatchNumberObject {
 	public String Notes;
 
 
-	public double Quantity;
+	public Double Quantity;
 
 
-	public int TrackingNote;
+	public Integer TrackingNote;
 
 
-	public int TrackingNoteLine;
+	public Integer TrackingNoteLine;
 
 
 	public Date getAddmisionDate() {
@@ -51,12 +54,12 @@ public class BatchNumberObject {
 	}
 
 
-	public int getBaseLineNumber() {
+	public Integer getBaseLineNumber() {
 		return BaseLineNumber;
 	}
 
 
-	public void setBaseLineNumber(int baseLineNumber) {
+	public void setBaseLineNumber(Integer baseLineNumber) {
 		BaseLineNumber = baseLineNumber;
 	}
 
@@ -81,13 +84,13 @@ public class BatchNumberObject {
 	}
 
 
-	public String getInternalSerialNumber() {
-		return InternalSerialNumber;
+	public String getIntegerernalSerialNumber() {
+		return IntegerernalSerialNumber;
 	}
 
 
-	public void setInternalSerialNumber(String internalSerialNumber) {
-		InternalSerialNumber = internalSerialNumber;
+	public void setIntegerernalSerialNumber(String IntegerernalSerialNumber) {
+		IntegerernalSerialNumber = IntegerernalSerialNumber;
 	}
 
 
@@ -131,35 +134,41 @@ public class BatchNumberObject {
 	}
 
 
-	public double getQuantity() {
+	public Double getQuantity() {
 		return Quantity;
 	}
 
 
-	public void setQuantity(double quantity) {
+	public void setQuantity(Double quantity) {
 		Quantity = quantity;
 	}
 
 
-	public int getTrackingNote() {
+	public Integer getTrackingNote() {
 		return TrackingNote;
 	}
 
 
-	public void setTrackingNote(int trackingNote) {
+	public void setTrackingNote(Integer trackingNote) {
 		TrackingNote = trackingNote;
 	}
 
 
-	public int getTrackingNoteLine() {
+	public Integer getTrackingNoteLine() {
 		return TrackingNoteLine;
 	}
 
 
-	public void setTrackingNoteLine(int trackingNoteLine) {
+	public void setTrackingNoteLine(Integer trackingNoteLine) {
 		TrackingNoteLine = trackingNoteLine;
 	}
 	
+	// GSON library for JSON
+	@Override
+	public String toString(){
+		Gson gson = new GsonBuilder().create();
+		return gson.toJson(this);
+	}
 	
 
 }

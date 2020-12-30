@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.hipstertech.domain.enumeration.DocumentType;
+import com.hipstertech.service.entities.BatchNumberObject;
 import com.hipstertech.service.entities.Document;
 import com.hipstertech.service.entities.DocumentLines;
 import com.hipstertech.service.entities.LoginSAP;
@@ -46,7 +47,7 @@ public class ServiceLayerClient {
 	public String bd;
 
 	private String cookie = null;
-	
+
 
 	public String getCookie() {
 		if (cookie == null || cookie.isEmpty()) {
@@ -105,7 +106,7 @@ public class ServiceLayerClient {
 
 
 
-	public Document createDocument(Document document, String resource) {
+	public Document createDocument(Document document, String resource) throws Exception {
 		try {
 
 			String objectToCreate =document.toJson();
@@ -124,7 +125,7 @@ public class ServiceLayerClient {
 			return entity;
 		}catch (Exception e) {
 			log.error(e.getMessage());
-			return null;
+			throw e;
 		}
 	}
 
@@ -159,23 +160,32 @@ public class ServiceLayerClient {
 			return null;
 		}
 	}
-	
+
 	private Document getDocumentFromResponseBody(String responseBody) {
 		Document document = null;
 		JsonObject convertedObject = new Gson().fromJson(responseBody, JsonObject.class);
 		document = new Gson().fromJson(convertedObject.getAsJsonArray("value").get(0).toString(),Document.class);
 		return document;
 	}
-	
-	private Document getDocumentFromResponseBodyPost(String responseBody) {
+
+	private Document getDocumentFromResponseBodyPost(String responseBody) throws Exception {
+		
 		Document document = null;
 		JsonObject convertedObject = new Gson().fromJson(responseBody, JsonObject.class);
-		document = new Gson().fromJson(convertedObject.toString(),Document.class);
-		return document;
+		
+		if(responseBody.contains("error")) {
+			String error = convertedObject.getAsJsonObject("error").getAsJsonObject("message").get("value").toString();
+			throw new Exception(error);
+		}else {
+			document = new Gson().fromJson(convertedObject.toString(),Document.class);
+			return document;
+		}
+
 	}
 
 	private List<DocumentLines> getLineWithValues(List<DocumentLines>  linesSAP, DocumentType type, int docEntry ) {
-		
+
+		//boolean isNCOpen = true;
 		List<DocumentLines> resultLines = new ArrayList<DocumentLines>();
 		linesSAP.forEach(lineSAP->{
 			DocumentLines line = new DocumentLines();
@@ -193,6 +203,7 @@ public class ServiceLayerClient {
 			line.setCurrency(lineSAP.getCurrency());
 			line.setItemCode(lineSAP.getItemCode());
 			line.setItemDescription(lineSAP.getItemDescription());
+			line.setItemDetails(lineSAP.getItemDetails());
 			line.setLineTotal(lineSAP.getLineTotal());
 			line.setOpenAmount(lineSAP.getOpenAmount());
 			line.setPrice(lineSAP.getPrice());
@@ -203,31 +214,47 @@ public class ServiceLayerClient {
 			line.setQuantity(lineSAP.getQuantity());
 			line.setDiscountPercent(lineSAP.getDiscountPercent());
 			line.setWarehouseCode(lineSAP.getWarehouseCode());
-			
+			line.setU_PLAZOSUS(lineSAP.getU_PLAZOSUS());
+
 			if(type.equals(DocumentType.FE)) {
-				
+
+					List<BatchNumberObject> batchNumbers = new ArrayList<BatchNumberObject>();
+					BatchNumberObject batchNumberObject = new BatchNumberObject();
+					batchNumberObject.setBatchNumber("20201227");
+					batchNumberObject.setQuantity(lineSAP.getQuantity());
+					batchNumbers.add(batchNumberObject);
+					line.setBatchNumbers(batchNumbers);	
+
 			}
-			
+
 			if(type.equals(DocumentType.NC)) {
-				line.setBaseEntry(docEntry);
-				line.setBaseLine(lineSAP.getLineNum()+"");
-				line.setBaseType(13);
+
+				List<BatchNumberObject> batchNumbers = new ArrayList<BatchNumberObject>();
+				BatchNumberObject batchNumberObject = new BatchNumberObject();
+				batchNumberObject.setBatchNumber("20201227");
+				batchNumberObject.setQuantity(lineSAP.getQuantity());
+				batchNumbers.add(batchNumberObject);
+				line.setBatchNumbers(batchNumbers);
+
+				//line.setBaseEntry(isNCOpen ? 0 :docEntry);
+				//line.setBaseLine(isNCOpen ? "" :lineSAP.getLineNum()+"");
+				//line.setBaseType(isNCOpen ? 0 :13);
 			}
-			
+
 			resultLines.add(line);
 		});
-		
+
 		return resultLines;
 	}
 
 	private Document setDocumentValues(Document invoiceSAP,int serie, DocumentType type) throws ParseException {
-		
+
 		Date today = new Date();
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(today);
 		cal.add(Calendar.MONTH, 1);
 		Date todayPlus30Days = cal.getTime();
-		
+
 		Document invoiceResult = new Document();
 		invoiceResult.setCardCode(invoiceSAP.getCardCode());
 		invoiceResult.setComments(invoiceSAP.getComments());
@@ -239,7 +266,7 @@ public class ServiceLayerClient {
 		invoiceResult.setNumAtCard(invoiceSAP.getNumAtCard());
 		invoiceResult.setReference1(invoiceSAP.getReference1());
 		invoiceResult.setReference2(invoiceSAP.getReference2());
-		invoiceResult.setU_BDOC(invoiceSAP.getU_BDOC());
+		invoiceResult.setU_BDOC(invoiceSAP.getU_BDOC() + "-1");
 		invoiceResult.setU_FormPag(invoiceSAP.getU_FormPag());
 		invoiceResult.setU_NAR(invoiceSAP.getU_NAR());
 		invoiceResult.setU_NCA(invoiceSAP.getU_NCA());
@@ -248,16 +275,12 @@ public class ServiceLayerClient {
 		invoiceResult.setU_NSP(invoiceSAP.getU_NSP());
 		invoiceResult.setU_TipoDoc(invoiceSAP.getU_TipoDoc());
 		invoiceResult.setDocObjectCode(type.equals(DocumentType.FE) ? "13" : "14");
-		invoiceResult.setU_PLAZOSUS(invoiceSAP.getU_PLAZOSUS());
-		//invoiceResult.setIssuingReason(invoiceSAP.getIssuingReason());
-		//invoiceResult.setRelatedType(invoiceSAP.getRelatedType());
-		//invoiceResult.setU_GTI_MOTIVOS(invoiceSAP.getU_GTI_MOTIVOS());
-		//invoiceResult.setU_TipoExon(invoiceSAP.getU_TipoExon());
+		invoiceResult.setU_SCGRMS_Referencia9("Documento origen docuNum 9.3: " + invoiceSAP.getDocNum());
 		invoiceResult.setSeries(serie);
 		if(type.equals(DocumentType.NC)) {
 			invoiceResult.setU_BDOC(invoiceSAP.getDocNum()+"");
 		}
-		
+
 		if(type.equals(DocumentType.FE)) {
 			invoiceResult.setReserve(invoiceSAP.getReserve());
 			invoiceResult.setReserveInvoice(invoiceSAP.getReserveInvoice());
